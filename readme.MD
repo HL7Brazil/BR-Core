@@ -1,4 +1,4 @@
-#  Welcome to the BR-CORE Implementation Guide Repository
+#  Welcome to the BR-Core Implementation Guide Repository
 
 **BR Core Implementation Guide (FHIR IG) <!--[Publication (Version) History](http://hl7.org/fhir/br/core/history.html)**!-->
 
