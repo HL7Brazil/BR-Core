@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="7ba7dc20-9251-417f-bc02-0a08c2986710" />
   <meta>
@@ -7,14 +6,14 @@
   <language value="pt-BR" />
   <url value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0" />
   <version value="1.0" />
-  <name value="Patient" />
-  <title value="Patient" />
+  <name value="BRIndividuo" />
+  <title value="Indivíduo" />
   <status value="active" />
   <date value="2020-03-13T19:48:14.539093+00:00" />
   <publisher value="Ministério da Saúde do Brasil" />
   <description value="Indíviduo, sujeito da assistência à saúde." />
   <purpose value="O indivíudo é o sujeito central para os processos informativos de dados em saúde. Não deve ser utilizado quando na condição de profissional." />
-  <fhirVersion value="4.0.1" />
+  <fhirVersion value="4.0.0" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Patient" />
@@ -150,7 +149,7 @@
     <element id="Patient.active">
       <path value="Patient.active" />
       <short value="Registro em Uso" />
-      <definition value="Indica se o registro desse indivíduo ainda está em uso.\nA codição de inativo pode indicar que tanto uma informação errada quanto um indivíduo falecido, e indivíduos falecidos podem permanecer ativos por algum tempo após o falecimento para fins de registro da informação.\nLogo, esta não deve ser opção para identificar um indivíduo falecido, sendo mais adequado o elemento deceased." />
+      <definition value="Indica se o registro desse indivíduo ainda está em uso.&#xD;&#xA;A codição de inativo pode indicar que tanto uma informação errada quanto um indivíduo falecido, e indivíduos falecidos podem permanecer ativos por algum tempo após o falecimento para fins de registro da informação.&#xD;&#xA;Logo, esta não deve ser opção para identificar um indivíduo falecido, sendo mais adequado o elemento deceased." />
       <comment value="Valor padrão é true." />
       <requirements value="Identificar registros que não estão mais em uso." />
       <min value="1" />
@@ -174,7 +173,7 @@
     <element id="Patient.gender">
       <path value="Patient.gender" />
       <short value="Sexo" />
-      <definition value="male: masculino.\nfemale: feminino.\nunknown: ignorado." />
+      <definition value="male: masculino.&#xD;&#xA;female: feminino.&#xD;&#xA;unknown: ignorado." />
       <min value="1" />
       <mustSupport value="true" />
       <binding>
@@ -220,7 +219,7 @@
     <element id="Patient.maritalStatus">
       <path value="Patient.maritalStatus" />
       <short value="Estado Civil" />
-      <definition value="Complexo das qualidades do indivíudo referentes à ordem pública, à ordem privada e à ordem física do ser humano. Refere-se, assim, à cidadania, à família, e à capacidade civil.\nMIRABETE, Julio Fabbrini. Código de processo penal interpretado.11. ed. 6. tir. São Paulo: Atlas, 2003." />
+      <definition value="Complexo das qualidades do indivíudo referentes à ordem pública, à ordem privada e à ordem física do ser humano. Refere-se, assim, à cidadania, à família, e à capacidade civil.&#xD;&#xA;MIRABETE, Julio Fabbrini. Código de processo penal interpretado.11. ed. 6. tir. São Paulo: Atlas, 2003." />
       <max value="0" />
       <mustSupport value="true" />
     </element>
@@ -238,9 +237,6 @@
       <min value="1" />
     </element>
     <element id="Patient.maritalStatus.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Patient.maritalStatus.coding.display" />
       <max value="0" />
     </element>
@@ -249,9 +245,6 @@
       <max value="0" />
     </element>
     <element id="Patient.maritalStatus.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Patient.maritalStatus.text" />
       <max value="0" />
     </element>
@@ -266,9 +259,6 @@
       <max value="0" />
     </element>
     <element id="Patient.contact">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Contact" />
-      </extension>
       <path value="Patient.contact" />
       <max value="0" />
     </element>
