@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Hidden IG for de facto IG publishing-->
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="hl7.fhir.br.core"/>
+  <url value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.br.core"/>
+  <version value="1.0.0"/>
+  <name value="BRCore"/>
+  <title value="BR Core"/>
+  <status value="active"/>
+  <publisher value="HL7 International - BR Realm Steering Committee"/>
+  <contact>
+    <!-- 0..* ContactDetail Contact details for the publisher -->
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/brrealm/index.cfm"/>
+    </telecom>
+  </contact>
+  <copyright    value="Used by permission of HL7 International, all rights reserved Creative Commons License"/>
+  <!-- 0..1 Use and/or publishing restrictions -->
+  <packageId value="hl7.fhir.br.core"/>
+  <!-- 0..1 NPM Package name for IG -->
+  <license value="CC0-1.0"/>
+  <!--*****HARDCODED********* 0..1 SPDX license code for this IG (or not-open-source) -->
+  <fhirVersion value="4.0.1"/>
+  <!-- 0..1 FHIR Version this Implementation Guide targets -->
+  <definition>
+    <!--  <grouping>  0..* Grouping used to present related resources in the IG -->
+    <!-- <name value="[string]"/> 1..1 Descriptive name for the package -->
+    <!--   <description value="[string]"/> 0..1 Human readable text describing the package -->
+    <!--  </grouping>  -->
+    <grouping>
+      <name value="base"/>
+    </grouping>
+    <!-- <resource>
+    <reference>
+      <reference value="[type]/[id]"/>
+    </reference>
+    <name value="Test Example"/>
+    <description value="A test example to show how a implementation guide works"/>
+    <exampleCanonical value="http://hl7.org/fhir/us/core/StructureDefinition/patient"/>|<exampleBoolean value="true|false"/>
+  </resource>   -->
+  <!--  <groupingId value="[id]"/>  0..1 Grouping this is part of -->
+  <!-- insert resources -->
+  <resource>
+    <reference>
+      <reference value="Observation/urine-glucose"/>
+    </reference>
+    <exampleBoolean value="true"/>
+  </resource>
+  <!-- ============ Home Page =============== -->
+  <page>
+    <nameUrl value="index.html"/>
+    <title value="Home"/>
+    <generation value="markdown"/>
+    <!-- ============ Guidance Page =============== -->
+    <page>
+      <nameUrl value="guidance.html"/>
+      <title value="Guidance"/>
+      <generation value="markdown"/>
+      <page>
+        <nameUrl value="general-guidance.html"/>
+        <title value="General Guidance"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="clinical-notes-guidance.html"/>
+        <title value="Clinical Notes Guidance"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="all-meds.html"/>
+        <title value="Medication List Guidance"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="basic-provenance.html"/>
+        <title value="Basic Provenance"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="r2-r4-guidance.html"/>
+        <title value="DSTU2 to R4 Conversion"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="future-of-br-core.html"/>
+        <title value="Future of BR Core"/>
+        <generation value="markdown"/>
+      </page>
+    </page>
+    <!-- ============ Guidance Page =============== -->
+    <!-- ============ Profiles Page =============== -->
+    <page>
+      <nameUrl value="profiles.html"/>
+      <title value="Profiles and Extensions"/>
+      <generation value="markdown"/>
+      <!-- ============ Profiles and examples=============== -->
+      <!-- insert profiles -->
+
+      <!--<page>
+        <nameUrl value="StructureDefinition-us-core-immunization.html"/>
+        <title value="StructureDefinition US Core Immunization"/>
+        <generation value="generated"/>
+      </page>!-->      
+
+      <!-- ============ End Profiles and examples=============== -->
+      <!-- ============ Extensions and examples =============== -->
+      <!-- insert extensions -->
+      <!-- ============ End Extensions and examples =============== -->
+    </page>
+    <!-- ============ Operations Page =============== -->
+    <page>
+      <nameUrl value="operations.html"/>
+      <title value="Operations"/>
+      <generation value="markdown"/>
+      <!-- ============ Operations and examples  =============== -->
+      <!-- insert operationdefinitions -->
+      <page>
+        <nameUrl value="OperationDefinition-docref.html"/>
+        <title value="OperationDefinition Docref"/>
+        <generation value="generated"/>
+      </page>
+      <!-- ============ End Operations and examples  =============== -->
+    </page>
+    <!-- ============ Terminology Page =============== -->
+    <page>
+      <nameUrl value="terminology.html"/>
+      <title value="Terminology"/>
+      <generation value="markdown"/>
+      <!-- ============ ValueSet   =============== -->
+      <!-- insert valuesets -->
+
+      <!--<page>
+        <nameUrl value="ValueSet-us-core-medication-codes.html"/>
+        <title value="ValueSet US Core Medication Codes"/>
+        <generation value="generated"/>
+      </page>-->
+
+      <!-- ============ End ValueSet   =============== -->
+      <!-- ============ CodeSystems  =============== -->
+      <!-- insert codesystems -->
+
+      <!--<page>
+        <nameUrl value="CodeSystem-cdcrec.html"/>
+        <title value="CodeSystem Cdcrec"/>
+        <generation value="generated"/>
+      </page>!-->
+
+      <!-- ============ End CodeSystems  =============== -->
+      <!-- ============ ConceptMaps   =============== -->
+      <!-- insert conceptmaps -->
+
+      <!--<page>
+        <nameUrl value="ConceptMap-ndc-cvx.html"/>
+        <title value="ConceptMap Ndc Cvx"/>
+        <generation value="generated"/>
+      </page>-->
+
+      <!-- ============ End ConceptMaps   =============== -->
+    </page>
+    <!-- ============ SearchParameter Page =============== -->
+    <page>
+      <nameUrl value="searchparameters.html"/>
+      <title value="Search Parameters"/>
+      <generation value="markdown"/>
+      <!-- ============ SearchParameters =============== -->
+      <!-- insert searchparameters -->
+
+      <!--<page>
+        <nameUrl value="SearchParameter-us-core-location-address-state.html"/>
+        <title value="SearchParameter US Core Location Address State"/>
+        <generation value="generated"/>
+      </page>!-->
+
+      <!-- ============ End SearchParameters  =============== -->
+    </page>
+    <!-- ============ CapabilityStatement Page =============== -->
+    <page>
+      <nameUrl value="capstatements.html"/>
+      <title value="Capability Statements"/>
+      <generation value="markdown"/>
+      <!-- ============ CapabilityStatements    =============== -->
+      <!-- insert capabilitystatements -->
+      
+      <!--<page>
+        <nameUrl value="CapabilityStatement-us-core-server.html"/>
+        <title value="CapabilityStatement US Core Server"/>
+        <generation value="generated"/>
+      </page>
+      <page>
+        <nameUrl value="CapabilityStatement-us-core-client.html"/>
+        <title value="CapabilityStatement US Core Client"/>
+        <generation value="generated"/>
+      </page>!-->
+
+      <!-- ============ End CapabilityStatements    =============== -->
+    </page>
+    <!-- ============ Security Page =============== -->
+    <page>
+      <nameUrl value="security.html"/>
+      <title value="Security"/>
+      <generation value="markdown"/>
+    </page>
+    <!-- ============ Downloads Page =============== -->
+    <page>
+      <nameUrl value="downloads.html"/>
+      <title value="Downloads"/>
+      <generation value="markdown"/>
+    </page>
+    <!-- ============ Examples Page=============== -->
+    <page>
+      <nameUrl value="all-examples.html"/>
+      <title value="All Examples"/>
+      <generation value="markdown"/>
+    </page>
+    <!-- ============ Table of Contents =============== -->
+    <page>
+      <nameUrl value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+    </page>
+  </page>
+</definition>
+</ImplementationGuide>
