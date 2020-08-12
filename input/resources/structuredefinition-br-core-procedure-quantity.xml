@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="ee0344fa-7d1d-488d-9356-479b885bfedd" />
   <meta>
@@ -12,7 +13,7 @@
   <date value="2020-03-13T20:00:16.006533+00:00" />
   <publisher value="Ministério da Saúde do Brasil" />
   <description value="Extensão para identificar quantidades." />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>

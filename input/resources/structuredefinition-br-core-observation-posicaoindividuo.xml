@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="c966a277-85f3-4fc7-bfa7-314a94190df6" />
   <meta>
@@ -13,7 +14,7 @@
   <date value="2020-06-09T18:40:55.1287932+00:00" />
   <publisher value="Ministério da Saúde do Brasil" />
   <description value="Extensão para indicar a posição do indivíduo." />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>

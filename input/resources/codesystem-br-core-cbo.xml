@@ -1,7 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
   <id value="9eace61a-fca0-43c9-9846-9f8dd001c943" />
   <meta>
-    <lastUpdated value="2020-03-11T12:05:01.176+00:00" />
+    <versionId value="1" />
+    <lastUpdated value="2020-08-12T14:20:41.558+00:00" />
   </meta>
   <language value="pt-BR" />
   <url value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO" />
@@ -9,7 +11,7 @@
   <name value="Classificação Brasileira de Ocupações - CBO" />
   <status value="active" />
   <experimental value="false" />
-  <date value="2020-03-11T12:05:18.2868027+00:00" />
+  <date value="2020-08-12T14:20:37.4768454+00:00" />
   <publisher value="Ministério do Trabalho e Emprego do Brasil" />
   <description value="Classifica as profissões do mercado de trabalho brasileiro." />
   <content value="complete" />

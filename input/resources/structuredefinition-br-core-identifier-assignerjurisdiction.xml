@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="e93a2b50-3f50-4670-8242-8b9af26a3584" />
   <meta>
@@ -12,7 +13,7 @@
   <date value="2020-03-13T20:01:33.7451754+00:00" />
   <publisher value="Ministério da Saúde do Brasil" />
   <description value="Jurisdição de Órgãos Expedidores" />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>

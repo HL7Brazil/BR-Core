@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="a3bc0180-3d3d-469f-af04-7117f87db5be" />
   <meta>
@@ -12,7 +13,7 @@
   <date value="2020-03-13T20:46:45.7872438+00:00" />
   <publisher value="Ministério da Saúde do Brasil" />
   <description value="Espaço físico delimitado e permanente onde são realizadas ações e serviços de saúde humana sob responsabilidade técnica." />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Organization" />
@@ -108,6 +109,9 @@
       <min value="1" />
     </element>
     <element id="Organization.type.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="Organization.type.coding.display" />
       <max value="0" />
     </element>
@@ -116,6 +120,9 @@
       <max value="0" />
     </element>
     <element id="Organization.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="Organization.type.text" />
       <max value="0" />
     </element>
@@ -195,6 +202,9 @@
       <max value="0" />
     </element>
     <element id="Organization.partOf.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="Organization.partOf.display" />
       <max value="0" />
     </element>

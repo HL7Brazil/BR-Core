@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
     <lastUpdated value="2020-03-11T04:12:06.852+00:00" />
@@ -7,7 +8,7 @@
   <title value="Documento do Indivíduo" />
   <status value="active" />
   <date value="2020-03-11T04:12:06.1755665+00:00" />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <type value="Identifier" />
@@ -74,6 +75,9 @@
       <min value="1" />
     </element>
     <element id="Identifier.type.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="Identifier.type.coding.display" />
       <max value="0" />
     </element>
@@ -82,6 +86,9 @@
       <max value="0" />
     </element>
     <element id="Identifier.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="Identifier.type.text" />
       <max value="0" />
     </element>
@@ -132,6 +139,9 @@
       <max value="0" />
     </element>
     <element id="Identifier.assigner.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="Identifier.assigner.display" />
       <short value="Órgão Expedidor" />
       <min value="1" />

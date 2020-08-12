@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="abe19423-94f2-490a-911e-a82ff5665164" />
   <meta>
@@ -13,7 +14,7 @@
   <publisher value="Ministério da Saúde do Brasil" />
   <description value="Lotação de um profissional em um Estabelecimento de Saúde." />
   <purpose value="É necessário entender o vínculo entre profissionais e seus papéis/cargos/funções de atuação dentro de um Estabelecimento de Saúde." />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="PractitionerRole" />
@@ -102,6 +103,9 @@
       <max value="0" />
     </element>
     <element id="PractitionerRole.practitioner.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="PractitionerRole.practitioner.display" />
       <max value="0" />
     </element>
@@ -129,6 +133,9 @@
       <max value="0" />
     </element>
     <element id="PractitionerRole.organization.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="PractitionerRole.organization.display" />
       <max value="0" />
     </element>
@@ -159,6 +166,9 @@
       <min value="1" />
     </element>
     <element id="PractitionerRole.code.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="PractitionerRole.code.coding.display" />
       <max value="0" />
     </element>
@@ -167,6 +177,9 @@
       <max value="0" />
     </element>
     <element id="PractitionerRole.code.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="PractitionerRole.code.text" />
       <max value="0" />
     </element>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
     <lastUpdated value="2020-03-11T02:17:02.374+00:00" />
@@ -12,7 +13,7 @@
   <publisher value="Ministério da Saúde do Brasil" />
   <description value="Pessoa jurídica identificada no âmbito da Receita Federal do Brasil pelo Cadastro Nacional da Pessoa Jurídica (CNPJ) ou profissional liberal identificado pelo Cadastro de Pessoas Físicas (CPF)." />
   <purpose value="No Brasil, em especial no sistema de saúde, os serviços podem ser de propriedade de uma Pessoa Jurídica (administração pública, entidades empresariais, entidades sem fins lucrativos ou organizações internacionais e outras instituições extraterritoriais) ou de uma Pesoa Física (profissional liberal). Este perfil tem a finalidade de permitir essa identificação." />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Organization" />
@@ -63,6 +64,9 @@
       <min value="1" />
     </element>
     <element id="Organization.type.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="Organization.type.coding.display" />
       <max value="0" />
     </element>
@@ -71,6 +75,9 @@
       <max value="0" />
     </element>
     <element id="Organization.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="Organization.type.text" />
       <max value="0" />
     </element>

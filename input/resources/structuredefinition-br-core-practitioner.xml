@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
     <lastUpdated value="2020-03-11T02:17:31.624+00:00" />
@@ -12,7 +13,7 @@
   <publisher value="Ministério da Saúde do Brasil" />
   <description value="Indivíduo que realiza atividades profissionais." />
   <purpose value="O profissional de saúde é sujeito ativo para os processos informativos de dados em saúde, por isso é necessário a criação de um profile para esse recurso, que se adpate à realidade brasileira." />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Practitioner" />
@@ -153,6 +154,9 @@
       <min value="1" />
     </element>
     <element id="Practitioner.qualification.code.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="Practitioner.qualification.code.coding.display" />
       <max value="0" />
     </element>
@@ -161,6 +165,9 @@
       <max value="0" />
     </element>
     <element id="Practitioner.qualification.code.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="Practitioner.qualification.code.text" />
       <max value="0" />
     </element>

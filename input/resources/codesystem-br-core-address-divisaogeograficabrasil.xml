@@ -1,7 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
   <id value="14a58b08-366c-4fd4-ab5d-da004a11feb9" />
   <meta>
-    <lastUpdated value="2020-03-11T19:12:55.862+00:00" />
+    <versionId value="2" />
+    <lastUpdated value="2020-08-12T14:17:29.039+00:00" />
   </meta>
   <language value="pt-BR" />
   <url value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRDivisaoGeograficaBrasil" />
@@ -9,7 +11,7 @@
   <name value="Divisão Geográfica do Brasil" />
   <status value="active" />
   <experimental value="false" />
-  <date value="2020-03-11T19:13:16.339365+00:00" />
+  <date value="2020-08-12T14:17:27.7344425+00:00" />
   <publisher value="Instituto Brasileiro de Geografia e Estatística" />
   <description value="As regiões geográficas, estados, distrito federal e municípios do Brasil." />
   <content value="complete" />

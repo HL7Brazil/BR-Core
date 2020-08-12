@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
     <lastUpdated value="2020-03-13T20:25:59.559+00:00" />
@@ -11,7 +12,7 @@
   <date value="2020-03-13T20:26:23.0414137+00:00" />
   <publisher value="Ministério da Saúde do Brasil" />
   <description value="Extensão utilizada para identificar se um profissional ou Estabelecimento de Saúde oferece atendimento pelo Sistema Único de Saúde (SUS)." />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>

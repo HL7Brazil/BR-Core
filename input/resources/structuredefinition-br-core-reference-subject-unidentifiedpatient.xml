@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
     <lastUpdated value="2020-03-11T03:42:05.139+00:00" />
@@ -13,7 +14,7 @@
   <publisher value="Ministério da Saúde do Brasil" />
   <description value="Informações complementares necessárias ao Contato Assistencial na hipótese do indivíduo não poder ser identificado." />
   <purpose value="Deve ser utilizado sempre nas hipóteses legais previstas na Port. nº 84/SAS/MS/1997 e na Port. nº02/SAS/SGEP/MS/2012, situações onde é impossível identificar o indivíduo durante o Contato Assistencial." />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>

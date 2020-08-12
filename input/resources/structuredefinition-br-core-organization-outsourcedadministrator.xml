@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
     <lastUpdated value="2020-03-13T20:45:48.345+00:00" />
@@ -11,7 +12,7 @@
   <date value="2020-03-13T20:46:11.8055992+00:00" />
   <publisher value="Ministério da Saúde do Brasil" />
   <description value="Identifica organizações que são gerentes/administradoras (terceiras) ou intervenientes de outras." />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>
@@ -52,6 +53,9 @@
       <max value="0" />
     </element>
     <element id="Extension.value[x].display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="Extension.value[x].display" />
       <max value="0" />
     </element>

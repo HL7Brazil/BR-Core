@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="7ba7dc20-9251-417f-bc02-0a08c2986710" />
   <meta>
@@ -13,7 +14,7 @@
   <publisher value="Ministério da Saúde do Brasil" />
   <description value="Indíviduo, sujeito da assistência à saúde." />
   <purpose value="O indivíudo é o sujeito central para os processos informativos de dados em saúde. Não deve ser utilizado quando na condição de profissional." />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Patient" />
@@ -237,6 +238,9 @@
       <min value="1" />
     </element>
     <element id="Patient.maritalStatus.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="Patient.maritalStatus.coding.display" />
       <max value="0" />
     </element>
@@ -245,6 +249,9 @@
       <max value="0" />
     </element>
     <element id="Patient.maritalStatus.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="Patient.maritalStatus.text" />
       <max value="0" />
     </element>
@@ -259,6 +266,9 @@
       <max value="0" />
     </element>
     <element id="Patient.contact">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Contact" />
+      </extension>
       <path value="Patient.contact" />
       <max value="0" />
     </element>
