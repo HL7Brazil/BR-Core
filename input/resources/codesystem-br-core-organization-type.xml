@@ -1,38 +1,171 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
-  <id value="a422e7b3-47eb-424b-97d8-520400a1b9f6" />
   <meta>
-    <lastUpdated value="2020-03-30T18:15:21.477+00:00" />
+    <lastUpdated value="2020-03-11T18:25:07.005+00:00" />
   </meta>
   <language value="pt-BR" />
-  <url value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRNaturezaJuridica" />
-  <version value="2018" />
-  <name value="Natureza Jurídica" />
+  <url value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoEstabelecimentoSaude" />
+  <version value="201701A" />
+  <name value="Tipo de Estabelecimento de Saúde" />
   <status value="active" />
   <experimental value="false" />
-  <date value="2020-03-30T18:15:18.1570669+00:00" />
+  <date value="2020-03-11T18:25:27.5167216+00:00" />
   <publisher value="Ministério da Saúde do Brasil" />
-  <description value="Identifica a constituição jurídico-institucional das entidades públicas e privadas nos cadastros da administração pública do Brasil." />
+  <description value="Códigos para representação de tipos de estabelecimentos de saúde, de acordo com codificação já existente para o Cadastro Nacional de Estabelecimentos de Saúde (CNES)." />
   <content value="complete" />
-  <property>
-    <code value="type" />
-    <description value="tipo" />
-    <type value="code" />
-  </property>
+  <concept>
+    <code value="84" />
+    <display value="CENTRAL DE ABASTECIMENTO" />
+  </concept>
+  <concept>
+    <code value="68" />
+    <display value="CENTRAL DE GESTAO EM SAUDE" />
+  </concept>
+  <concept>
+    <code value="82" />
+    <display value="CENTRAL DE NOTIFICACAO,CAPTACAO E DISTRIB DE ORGAOS ESTADUAL" />
+  </concept>
+  <concept>
+    <code value="64" />
+    <display value="CENTRAL DE REGULACAO DE SERVICOS DE SAUDE" />
+  </concept>
+  <concept>
+    <code value="81" />
+    <display value="CENTRAL DE REGULACAO DO ACESSO" />
+  </concept>
+  <concept>
+    <code value="76" />
+    <display value="CENTRAL DE REGULACAO MEDICA DAS URGENCIAS" />
+  </concept>
+  <concept>
+    <code value="71" />
+    <display value="CENTRO DE APOIO A SAUDE DA FAMILIA" />
+  </concept>
+  <concept>
+    <code value="69" />
+    <display value="CENTRO DE ATENCAO HEMOTERAPIA E OU HEMATOLOGICA" />
+  </concept>
+  <concept>
+    <code value="70" />
+    <display value="CENTRO DE ATENCAO PSICOSSOCIAL" />
+  </concept>
+  <concept>
+    <code value="85" />
+    <display value="CENTRO DE IMUNIZACAO" />
+  </concept>
+  <concept>
+    <code value="61" />
+    <display value="CENTRO DE PARTO NORMAL - ISOLADO" />
+  </concept>
+  <concept>
+    <code value="2" />
+    <display value="CENTRO DE SAUDE/UNIDADE BASICA" />
+  </concept>
+  <concept>
+    <code value="36" />
+    <display value="CLINICA/CENTRO DE ESPECIALIDADE" />
+  </concept>
+  <concept>
+    <code value="22" />
+    <display value="CONSULTORIO ISOLADO" />
+  </concept>
+  <concept>
+    <code value="60" />
+    <display value="COOPERATIVA OU EMPRESA DE CESSAO DE TRABALHADORES NA SAUDE" />
+  </concept>
+  <concept>
+    <code value="43" />
+    <display value="FARMACIA" />
+  </concept>
+  <concept>
+    <code value="7" />
+    <display value="HOSPITAL ESPECIALIZADO" />
+  </concept>
+  <concept>
+    <code value="5" />
+    <display value="HOSPITAL GERAL" />
+  </concept>
+  <concept>
+    <code value="62" />
+    <display value="HOSPITAL/DIA - ISOLADO" />
+  </concept>
+  <concept>
+    <code value="67" />
+    <display value="LABORATORIO CENTRAL DE SAUDE PUBLICA LACEN" />
+  </concept>
+  <concept>
+    <code value="80" />
+    <display value="LABORATORIO DE SAUDE PUBLICA" />
+  </concept>
+  <concept>
+    <code value="79" />
+    <display value="OFICINA ORTOPEDICA" />
+  </concept>
+  <concept>
+    <code value="4" />
+    <display value="POLICLINICA" />
+  </concept>
+  <concept>
+    <code value="74" />
+    <display value="POLO ACADEMIA DA SAUDE" />
+  </concept>
+  <concept>
+    <code value="83" />
+    <display value="POLO DE PREVENCAO DE DOENCAS E AGRAVOS E PROMOCAO DA SAUDE" />
+  </concept>
   <concept>
     <code value="1" />
-    <display value="Administração Pública" />
-    <property>
-      <code value="type" />
-      <valueCode value="grupo" />
-    </property>
-    <concept>
-      <code value="101-5" />
-      <display value="Órgão Público do Poder Executivo Federal" />
-      <definition value="Esta Natureza Jurídica compreende:&#xD;&#xA;- os órgãos públicos do Poder Executivo Federal&#xD;&#xA;Esta Natureza Jurídica compreende também:&#xD;&#xA;- as embaixadas, os consulados, os escritórios de representações e demais unidades diplomáticas e consulares do Governo brasileiro em outros países ou em organizações internacionais&#xD;&#xA;- o Conselho Nacional dos Direitos da Criança e do Adolescente (Conanda)&#xD;&#xA;- a Advocacia-Geral da União&#xD;&#xA;Esta Natureza Jurídica não compreende:&#xD;&#xA;- as autarquias (110-4)&#xD;&#xA;-as fundações públicas (113-9)&#xD;&#xA;- os órgãos do Ministério Público da União (116-3)&#xD;&#xA;- os fundos especiais de natureza contábil e/ou financeira, não dotados de personalidade jurídica, previstos nos artigos 71 a 74 da Lei n. º 4.320, de 17/03/1964, criados no âmbito do Poder Executivo da União (131-7)&#xD;&#xA;- os fundos de avais públicos: União (131-7), Estadual ou do Distrito Federal (132-5) e Municipal (133-3)&#xD;&#xA;- a União (134-1)&#xD;&#xA;- as empresas públicas (201-1)&#xD;&#xA;- as sociedades de economia mista federais (203-8)&#xD;&#xA;- as embaixadas, os consulados, os escritórios de representações e as demais unidades diplomáticas do Governo brasileiro em outros países ou em organizações internacionais (502-9)" />
-      <property>
-        <code value="type" />
-        <valueCode value="categoria" />
-      </property>
-    </concept>
+    <display value="POSTO DE SAUDE" />
+  </concept>
+  <concept>
+    <code value="73" />
+    <display value="PRONTO ATENDIMENTO" />
+  </concept>
+  <concept>
+    <code value="21" />
+    <display value="PRONTO SOCORRO ESPECIALIZADO" />
+  </concept>
+  <concept>
+    <code value="20" />
+    <display value="PRONTO SOCORRO GERAL" />
+  </concept>
+  <concept>
+    <code value="77" />
+    <display value="SERVICO DE ATENCAO DOMICILIAR ISOLADO(HOME CARE)" />
+  </concept>
+  <concept>
+    <code value="75" />
+    <display value="TELESSAUDE" />
+  </concept>
+  <concept>
+    <code value="39" />
+    <display value="UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)" />
+  </concept>
+  <concept>
+    <code value="72" />
+    <display value="UNIDADE DE ATENCAO A SAUDE INDIGENA" />
+  </concept>
+  <concept>
+    <code value="78" />
+    <display value="UNIDADE DE ATENCAO EM REGIME RESIDENCIAL" />
+  </concept>
+  <concept>
+    <code value="50" />
+    <display value="UNIDADE DE VIGILANCIA EM SAUDE" />
+  </concept>
+  <concept>
+    <code value="15" />
+    <display value="UNIDADE MISTA" />
+  </concept>
+  <concept>
+    <code value="42" />
+    <display value="UNIDADE MOVEL DE NIVEL PRE-HOSPITALAR NA AREA DE URGENCIA" />
+  </concept>
+  <concept>
+    <code value="32" />
+    <display value="UNIDADE MOVEL FLUVIAL" />
+  </concept>
+  <concept>
+    <code value="40" />
+    <display value="UNIDADE MOVEL TERRESTRE" />
   </concept>
 </CodeSystem>

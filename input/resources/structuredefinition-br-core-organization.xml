@@ -2,7 +2,8 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="a3bc0180-3d3d-469f-af04-7117f87db5be" />
   <meta>
-    <lastUpdated value="2020-03-13T20:46:22.162+00:00" />
+    <versionId value="2" />
+    <lastUpdated value="2020-08-14T17:28:44.993+00:00" />
   </meta>
   <language value="pt-BR" />
   <url value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0" />
@@ -10,7 +11,7 @@
   <name value="BREstabelecimentoSaude" />
   <title value="Estabelecimento de Saúde" />
   <status value="active" />
-  <date value="2020-03-13T20:46:45.7872438+00:00" />
+  <date value="2020-08-14T17:28:43.1945207Z" />
   <publisher value="Ministério da Saúde do Brasil" />
   <description value="Espaço físico delimitado e permanente onde são realizadas ações e serviços de saúde humana sob responsabilidade técnica." />
   <fhirVersion value="4.0.1" />

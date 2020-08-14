@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="ad1f96cb-adf6-43fe-be49-f744c74f8935" />
   <meta>
-    <lastUpdated value="2020-03-11T02:17:02.374+00:00" />
+    <versionId value="1" />
+    <lastUpdated value="2020-08-14T17:28:50.788+00:00" />
   </meta>
   <language value="pt-BR" />
   <url value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPessoaJuridicaProfissionalLiberal-1.0" />
@@ -9,7 +11,7 @@
   <name value="BRPessoaJuridicaProfissionalLiberal" />
   <title value="Pessoa Jurídica e Profissional Liberal" />
   <status value="active" />
-  <date value="2020-03-11T02:17:01.8709644+00:00" />
+  <date value="2020-08-14T17:28:49.9374605Z" />
   <publisher value="Ministério da Saúde do Brasil" />
   <description value="Pessoa jurídica identificada no âmbito da Receita Federal do Brasil pelo Cadastro Nacional da Pessoa Jurídica (CNPJ) ou profissional liberal identificado pelo Cadastro de Pessoas Físicas (CPF)." />
   <purpose value="No Brasil, em especial no sistema de saúde, os serviços podem ser de propriedade de uma Pessoa Jurídica (administração pública, entidades empresariais, entidades sem fins lucrativos ou organizações internacionais e outras instituições extraterritoriais) ou de uma Pesoa Física (profissional liberal). Este perfil tem a finalidade de permitir essa identificação." />
