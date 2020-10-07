@@ -6,13 +6,13 @@
     {
       "fullUrl" : "http://somewhere.org/fhir/uv/myig/Provenance/h1-1",
       "resource" : {
-        "resourceType" : "Provenance",
+        "resourceType" : "Patient",
         "id" : "h1-1",
-        "target" : [ { "reference" : "StructureDefinition/myObservation" } ],
-        "occurredDateTime" : "2015-11-30",
+        "target" : [ { "reference" : "StructureDefinition/structuredefinition-br-core-patient" } ],
+        "occurredDateTime" : "2020-10-06",
         "reason" : [
           {
-            "text" : "Add \"conductible\" property to ActRelationshipType and ParticipationType codes.for ContextConduction RIM Change. And create Concept domain CodeSystem and ValueSet for ContextConductionStyle"
+            "text" : "Added Patient to BR-Core structure"
           }
         ],
         "activity" : {
@@ -29,7 +29,7 @@
                 "code" : "author"
               }
             },
-            "who" : { "display" : "Rob Hausam" }
+            "who" : { "display" : "Italo Costa" }
           },
           {
             "type" : {
