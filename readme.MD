@@ -12,7 +12,7 @@ Then, once you have ruby installed, you will need Jekyll (A ruby gem) installed.
 
 So just
 
-''gem install jekyll''
+```gem install jekyll```
 
 Finally, you will need the FHIR IG Publisher. It's available on:
 https://github.com/HL7/fhir-ig-publisher
@@ -21,6 +21,6 @@ And you're ready to go.
 
 ### How to generate this profile
 
-''java -jar publisher.jar -ini ig.ini''
+```java -jar publisher.jar -ini ig.ini```
 
 And check the output folder.
