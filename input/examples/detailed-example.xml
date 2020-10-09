@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patient xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  	<id value="example"/>
+	<meta>
+		<profile value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"/>
+	</meta>
+	<identifier>
+		<use value="official"/>
+		<type>
+			<coding>
+				<system value="http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoDocumentoIndividuo-1.0"/>
+				<code value="TAX"/>
+			</coding>
+    	</type>
+    	<value value="12345678910"/>
+	</identifier>
+	<active value="true"/>
+	<name>
+		<use value="official"/>
+		<text value="Italo Macedo do Amaral Costa"/>
+	</name>
+	<gender value="male"/>
+	<birthDate value="1985-10-02"/>
+</Patient>

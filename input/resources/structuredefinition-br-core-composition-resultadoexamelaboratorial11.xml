@@ -39,7 +39,7 @@
         </extension>
         <strength value="required" />
         <description value="Estado do Documento" />
-        <valueSet value="http://www.saude.gov.br/fhir/r4/ValueSet/BRDocumentoEstado-1.0" />
+        <valueSet value="http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoDocumento-1.0" />
       </binding>
     </element>
     <element id="Composition.type">

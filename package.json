@@ -1,0 +1,29 @@
+{
+  "name": "br.com.hl7.br-core",
+  "version": "0.0.1",
+  "description": "Guia de implementação do BR-Core",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hl7brazil/BR-Core.git"
+  },
+  "keywords": [
+    "HL7",
+    "FHIR",
+    "BR-Core",
+    "IG"
+  ],
+  "author": "Italo Costa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hl7brazil/BR-Core/issues"
+  },
+  "homepage": "https://github.com/hl7brazil/BR-Core#readme",
+  "dependencies": {
+    "firebase": "^7.23.0",
+    "firebase-tools": "^8.12.0"
+  }
+}

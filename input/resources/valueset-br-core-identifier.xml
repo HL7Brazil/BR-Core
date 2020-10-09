@@ -6,6 +6,7 @@
   <url value="http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoDocumentoIndividuo-1.0" />
   <version value="1.0" />
   <name value="Tipo de Documento do Indivíduo" />
+  <title value="Tipo de Documento do Indivíduo" />
   <status value="active" />
   <experimental value="false" />
   <date value="2020-03-12T13:27:32.6850777+00:00" />

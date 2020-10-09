@@ -6,6 +6,7 @@
   <url value="http://www.saude.gov.br/fhir/r4/ValueSet/BRCaraterAtendimento-1.0" />
   <version value="1.0" />
   <name value="Caráter de atendimento do Contato Assistencial" />
+  <title value="Caráter de atendimento do Contato Assistencial" />
   <status value="active" />
   <experimental value="false" />
   <date value="2020-03-11T18:39:35.2063756+00:00" />

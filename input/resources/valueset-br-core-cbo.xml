@@ -6,6 +6,7 @@
   <url value="http://www.saude.gov.br/fhir/r4/ValueSet/BROcupacao-1.0" />
   <version value="1.0" />
   <name value="Classificação Brasileira de Ocupações - CBO" />
+  <title value="Classificação Brasileira de Ocupações - CBO" />
   <status value="active" />
   <experimental value="false" />
   <date value="2020-03-12T13:22:05.8261152+00:00" />

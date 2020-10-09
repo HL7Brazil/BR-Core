@@ -6,6 +6,7 @@
   <url value="http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoLogradouro-1.0" />
   <version value="1.0" />
   <name value="Tipo de Logradouro" />
+  <title value="Tipo de Logradouro" />
   <status value="active" />
   <experimental value="false" />
   <date value="2020-03-12T14:50:47.8940392+00:00" />

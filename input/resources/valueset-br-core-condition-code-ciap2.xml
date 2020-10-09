@@ -6,6 +6,7 @@
   <url value="http://www.saude.gov.br/fhir/r4/ValueSet/BRCIAP2-1.0" />
   <version value="1.0" />
   <name value="Classificação Internacional de Atenção Primária - Segunda Edição - CIAP2" />
+  <title value="Classificação Internacional de Atenção Primária - Segunda Edição - CIAP2" />
   <status value="active" />
   <experimental value="false" />
   <date value="2020-03-11T18:43:43.0294815+00:00" />

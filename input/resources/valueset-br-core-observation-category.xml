@@ -6,6 +6,7 @@
   <url value="http://www.saude.gov.br/fhir/r4/ValueSet/BRCategoriaObservacao-1.0" />
   <version value="1.0" />
   <name value="Categoria da observação" />
+  <title value="Categoria da observação" />
   <status value="active" />
   <experimental value="false" />
   <date value="2020-06-09T17:07:24.6148832+00:00" />
