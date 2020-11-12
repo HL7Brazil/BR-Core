@@ -133,7 +133,7 @@
     há um binding (amarração) de conceito codificável que será checado dentro do seu domínio (ValueSet).
     <strong>É dever, obrigação dar suporte (SHALL)</strong>
     aos conceitos codificáveis. A utilização de texto (display) do conceito, portanto, <strong>NÃO É VÁLIDA</strong>.
-    Múltiplas codificações para as condições de uma Observation em um <a href="Structuredefinition-br-core-composition-resultadoexamelaboratorial11.html">ResultadoExameLaboratorial-1.1</a> devem ser suportadas e são permitidas.
+    Múltiplas codificações para as condições de uma Observation em um <a href="StructureDefinition-43822493-10c2-41dc-9fae-962bab3a59e4.html">ResultadoExameLaboratorial-1.1</a> devem ser suportadas e são permitidas.
   </p>
 
   <p>Para ilustrar, um exemplo de múltiplas traduções para peso utilizando conceitos codificáveis (CodeableConcept).</p>
