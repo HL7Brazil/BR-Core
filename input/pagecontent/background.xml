@@ -36,7 +36,7 @@
       <a href="#search-syntax" id="markdown-toc-search-syntax">Sintaxe de buscas</a>
     </li>
     <li>
-      <a href="#resultadoexamelaboratorial11" id="markdown-toc-resultadoexamelaboratorial11">Sintaxe para Notificação de teste de diagnóstico para COVID-19</a>
+      <a href="#resultadoexamelaboratorial11" id="markdown-toc-resultadoexamelaboratorial11">Sintaxe para Resultado Exame Laboratorial 1.0</a>
     </li>
   </ul>
 
@@ -181,11 +181,11 @@
   <div class="highlighter-rouge">
     <div class="highlight">
       <pre class="highlight">
-        <code> "valueQuantity": 
-                {
-                  "value": 26.0,
-                  "unit": "RR",
-                }
+        <code>"valueQuantity": 
+              {
+                "value": 26.0,
+                "unit": "RR",
+              }
         </code>
       </pre>
     </div>
@@ -372,7 +372,7 @@
   </ul>
 
   <a name="resultadoexamelaboratorial11"></a>
-  <h3>Sintaxe para Notificação de teste de diagnóstico para COVID-19</h3>
+  <h3>Sintaxe para Resultado Exame Laboratorial 1.0 (<a href="StructureDefinition-43822493-10c2-41dc-9fae-962bab3a59e4.html">BRResultadoExameLaboratorial-1.0</a>)</h3>
 
   <p>Para realizar notificações de teste de diagnóstico para COVID-19, deve-se seguir a sintaxe:</p>
 
