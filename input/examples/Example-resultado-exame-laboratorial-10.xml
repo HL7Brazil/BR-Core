@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="example"/>
+    <meta>
+        <lastUpdated value="2020-03-23T14:23:56.567-02:00"/>
+    </meta>
+    <identifier>
+        <system value="http://www.saude.gov.br/fhir/r4/NamingSystem/BRRNDS-id-solicitacao"/>
+        <value value="765345678987654345678"/>
+    </identifier>
+    <type value="document"/>
+    <timestamp value="2020-03-23T14:23:56.567-02:00"/>
+    <entry>
+        <fullUrl value="urn:uuid:transient-0"/>
+        <resource>
+            <Composition>
+                <meta>
+                    <profile value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRResultadoExameLaboratorial-1.0"/>
+                </meta>
+                <status value="final"/>
+                <type>
+                    <coding>
+                        <system value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento"/>
+                        <code value="REL"/>
+                    </coding>
+                </type>
+                <subject>
+                    <identifier>
+                        <system value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"/>
+                        <value value="700500572752652"/>
+                    </identifier>
+                </subject>
+                <date value="2020-03-23T10:30:12.947-02:00"/>
+                <author>
+                    <identifier>
+                        <system value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPessoaJuridicaProfissionalLiberal-1.0"/>
+                        <value value="00394544000185"/>
+                    </identifier>
+                </author>
+                <title value="Resultado de Exame Laboratorial"/>
+                <section>
+                    <entry>
+                        <reference value="urn:uuid:transient-1"/>
+                    </entry>
+                </section>
+            </Composition>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:transient-1"/>
+        <resource>
+            <Observation>
+                <meta>
+                    <profile value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRDiagnosticoLaboratorioClinico-1.0"/>
+                </meta>
+                <status value="final"/>
+                <category>
+                    <coding>
+                        <system value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRSubgrupoTabelaSUS"/>
+                        <code value="0214"/>
+                    </coding>
+                </category>
+                <code>
+                    <coding>
+                        <system value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRNomeExameGAL"/>
+                        <code value="coronavirusnCoV"/>
+                    </coding>
+                </code>
+                <subject>
+                    <identifier>
+                        <system value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"/>
+                        <value value="700500572752652"/>
+                    </identifier>
+                </subject>
+                <issued value="2020-03-23T10:30:12.947-02:00"/>
+                <performer>
+                    <identifier>
+                        <system value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPessoaJuridicaProfissionalLiberal-1.0"/>
+                        <value value="00394544000185"/>
+                    </identifier>
+                </performer>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRResultadoQualitativoExame"/>
+                        <code value="3"/>
+                    </coding>
+                </valueCodeableConcept>
+                <interpretation>
+                    <coding>
+                        <system value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRResultadoQualitativoExame"/>
+                        <code value="2"/>
+                    </coding>
+                </interpretation>
+                <note>
+                    <text value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mauris velit, maximus a vulputate nec, interdum ut mauris. Aenean a."/>
+                </note>
+                <method>
+                    <text value="Lorem ipsum dolor sit amet, consectetur adipiscing elit."/>
+                </method>
+                <specimen>
+                    <reference value="urn:uuid:transient-2"/>
+                </specimen>
+                <referenceRange>
+                    <text value="Vestibulum mauris velit, maximus a vulputate nec, interdum ut mauris."/>
+                </referenceRange>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:transient-2"/>
+        <resource>
+            <Specimen>
+                <meta>
+                    <profile value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAmostraBiologica-1.0"/>
+                </meta>
+                <type>
+                    <coding>
+                        <system value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoAmostraGAL"/>
+                        <code value="SECONF"/>
+                    </coding>
+                </type>
+            </Specimen>
+        </resource>
+    </entry>
+</Bundle>
