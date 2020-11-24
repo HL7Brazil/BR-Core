@@ -7,7 +7,6 @@
   <url value="http://www.saude.gov.br/fhir/r4/ValueSet/BRSexo-1.0" />
   <version value="1.0" />
   <name value="Sexo" />
-  <title value="Sexo" />
   <status value="active" />
   <experimental value="false" />
   <date value="2020-04-07T21:07:00.8812267+00:00" />

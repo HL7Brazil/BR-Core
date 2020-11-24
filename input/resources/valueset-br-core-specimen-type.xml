@@ -7,7 +7,6 @@
   <url value="http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoAmostra-1.0" />
   <version value="1.0" />
   <name value="Tipo de Amostra de Exame" />
-  <title value="Tipo de Amostra de Exame" />
   <status value="active" />
   <experimental value="false" />
   <date value="2020-06-30T18:56:47.6561959+00:00" />

@@ -7,7 +7,6 @@
   <url value="http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoObservacao-1.0" />
   <version value="1.0" />
   <name value="Tipo de Observação" />
-  <title value="Tipo de Observação" />
   <status value="active" />
   <experimental value="false" />
   <date value="2020-06-09T17:08:58.0863667+00:00" />

@@ -7,7 +7,6 @@
   <url value="http://www.saude.gov.br/fhir/r4/ValueSet/BRResultadoQualitativoExame-1.0" />
   <version value="201701A" />
   <name value="Resultado Qualitativo do Exame" />
-  <title value="Resultado Qualitativo do Exame" />
   <status value="active" />
   <experimental value="false" />
   <date value="2020-03-26T13:21:38.6543319+00:00" />

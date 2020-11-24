@@ -9,7 +9,6 @@
   <url value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRDivisaoGeograficaBrasil" />
   <version value="201701A" />
   <name value="Divisão Geográfica do Brasil" />
-  <title value="Divisão Geográfica do Brasil" />
   <status value="active" />
   <experimental value="false" />
   <date value="2020-08-12T14:17:27.7344425+00:00" />

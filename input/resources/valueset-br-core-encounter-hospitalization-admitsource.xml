@@ -6,7 +6,6 @@
   <url value="http://www.saude.gov.br/fhir/r4/ValueSet/BRProcedencia-1.0" />
   <version value="1.0" />
   <name value="Procedência do Contato Assistencial" />
-  <title value="Procedência do Contato Assistencial" />
   <status value="active" />
   <experimental value="false" />
   <date value="2020-03-12T13:23:45.1685886+00:00" />

@@ -6,7 +6,6 @@
   <url value="http://www.saude.gov.br/fhir/r4/ValueSet/BRModalidadeAssistencial-1.0" />
   <version value="1.0" />
   <name value="Modalidade Assistencial" />
-  <title value="Modalidade Assistencial" />
   <status value="active" />
   <experimental value="false" />
   <date value="2020-03-12T13:17:18.5012669+00:00" />

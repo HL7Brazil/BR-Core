@@ -6,7 +6,6 @@
   <url value="http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoEstabelecimentoSaude-1.0" />
   <version value="1.0" />
   <name value="Tipo de Estabelecimento de Saúde" />
-  <title value="Tipo de Estabelecimento de Saúde" />
   <status value="active" />
   <experimental value="false" />
   <date value="2020-03-12T13:27:40.6996671+00:00" />

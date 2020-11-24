@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="44b7d8e1-1209-4ffe-b236-b03e76422bf3" />
+  <meta>
+    <versionId value="2" />
+    <lastUpdated value="2020-08-12T14:17:51.429+00:00" />
+  </meta>
+  <language value="pt-BR" />
+  <url value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoLogradouro" />
+  <version value="201701A" />
+  <name value="Tipo de Logradouro" />
+  <status value="active" />
+  <experimental value="false" />
+  <date value="2020-08-12T14:17:51.51894+00:00" />
+  <publisher value="Ministério da Saúde do Brasil" />
+  <description value="Classificação os tipos de logradouros existentes para uso em endereços estruturados." />
+  <content value="complete" />
+  <concept>
+    <code value="008" />
+    <display value="Avenida" />
+  </concept>
+  <concept>
+    <code value="081" />
+    <display value="Rua" />
+  </concept>
+</CodeSystem>

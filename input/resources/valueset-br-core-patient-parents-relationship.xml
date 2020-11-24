@@ -6,7 +6,6 @@
   <url value="http://www.saude.gov.br/fhir/r4/ValueSet/BRParentesco-1.0" />
   <version value="1.0" />
   <name value="Parentesco" />
-  <title value="Parentesco" />
   <status value="active" />
   <experimental value="false" />
   <date value="2020-03-12T13:23:16.6535149+00:00" />
