@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://br-core.gointerop.com/fhir/StructureDefinition/Patient" />
+  <name value="Patient" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="cda" />
+    <uri value="http://hl7.org/v3/cda" />
+    <name value="CDA (R2)" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="loinc" />
+    <uri value="http://loinc.org" />
+    <name value="LOINC code for the element" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Patient" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Patient" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Patient.identifier">
+      <path value="Patient.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Patient.identifier.use">
+      <path value="Patient.identifier.use" />
+      <min value="1" />
+    </element>
+    <element id="Patient.identifier.system">
+      <path value="Patient.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Patient.identifier.value">
+      <path value="Patient.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Patient.identifier:cpf">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Patient.identifier" />
+      <sliceName value="cpf" />
+    </element>
+    <element id="Patient.identifier:cpf.use">
+      <path value="Patient.identifier.use" />
+      <min value="1" />
+      <fixedCode value="official" />
+    </element>
+    <element id="Patient.identifier:cpf.system">
+      <path value="Patient.identifier.system" />
+      <min value="1" />
+      <fixedUri value="http://rnds.saude.gov.br/fhir/r4/NamingSystem/cpf" />
+    </element>
+    <element id="Patient.identifier:cpf.value">
+      <path value="Patient.identifier.value" />
+      <min value="1" />
+      <patternString value="[0-9]{11}" />
+    </element>
+    <element id="Patient.identifier:cns">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Patient.identifier" />
+      <sliceName value="cns" />
+    </element>
+    <element id="Patient.identifier:cns.use">
+      <path value="Patient.identifier.use" />
+      <min value="1" />
+    </element>
+    <element id="Patient.identifier:cns.system">
+      <path value="Patient.identifier.system" />
+      <min value="1" />
+      <fixedUri value="http://rnds.saude.gov.br/fhir/r4/NamingSystem/cns" />
+    </element>
+    <element id="Patient.identifier:cns.value">
+      <path value="Patient.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Patient.name">
+      <path value="Patient.name" />
+      <min value="1" />
+    </element>
+    <element id="Patient.name.use">
+      <path value="Patient.name.use" />
+      <min value="1" />
+    </element>
+    <element id="Patient.name.text">
+      <path value="Patient.name.text" />
+      <min value="1" />
+    </element>
+    <element id="Patient.name.family">
+      <path value="Patient.name.family" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name.given">
+      <path value="Patient.name.given" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.telecom">
+      <path value="Patient.telecom" />
+      <min value="1" />
+    </element>
+    <element id="Patient.telecom.system">
+      <path value="Patient.telecom.system" />
+      <min value="1" />
+    </element>
+    <element id="Patient.telecom.value">
+      <path value="Patient.telecom.value" />
+      <min value="1" />
+    </element>
+    <element id="Patient.telecom.use">
+      <path value="Patient.telecom.use" />
+      <min value="1" />
+    </element>
+    <element id="Patient.gender">
+      <path value="Patient.gender" />
+      <min value="1" />
+    </element>
+    <element id="Patient.birthDate">
+      <path value="Patient.birthDate" />
+      <min value="1" />
+    </element>
+    <element id="Patient.address">
+      <path value="Patient.address" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="line" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Patient.address.use">
+      <path value="Patient.address.use" />
+      <min value="1" />
+    </element>
+    <element id="Patient.address.type">
+      <path value="Patient.address.type" />
+      <min value="1" />
+    </element>
+    <element id="Patient.address.text">
+      <path value="Patient.address.text" />
+      <min value="1" />
+    </element>
+    <element id="Patient.address.line">
+      <path value="Patient.address.line" />
+      <slicing>
+        <discriminator>
+          <type value="exists" />
+          <path value="value" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+      <max value="5" />
+    </element>
+    <element id="Patient.address.line:streetType">
+      <path value="Patient.address.line" />
+      <sliceName value="streetType" />
+      <max value="1" />
+    </element>
+    <element id="Patient.address.line:street">
+      <path value="Patient.address.line" />
+      <sliceName value="street" />
+      <max value="1" />
+    </element>
+    <element id="Patient.address.line:number">
+      <path value="Patient.address.line" />
+      <sliceName value="number" />
+      <max value="1" />
+    </element>
+    <element id="Patient.address.line:complement">
+      <path value="Patient.address.line" />
+      <sliceName value="complement" />
+      <max value="1" />
+    </element>
+    <element id="Patient.address.line:neighborhood">
+      <path value="Patient.address.line" />
+      <sliceName value="neighborhood" />
+      <max value="1" />
+    </element>
+    <element id="Patient.address.city">
+      <path value="Patient.address.city" />
+      <min value="1" />
+    </element>
+    <element id="Patient.address.state">
+      <path value="Patient.address.state" />
+      <min value="1" />
+    </element>
+    <element id="Patient.address.postalCode">
+      <path value="Patient.address.postalCode" />
+      <min value="1" />
+    </element>
+    <element id="Patient.address.country">
+      <path value="Patient.address.country" />
+      <min value="1" />
+    </element>
+    <element id="Patient.contact">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Contact" />
+      </extension>
+      <path value="Patient.contact" />
+    </element>
+  </differential>
+</StructureDefinition>
