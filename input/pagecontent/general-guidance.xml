@@ -1,0 +1,784 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <p>
+    This section outlines important definitions, interpretations, and requirements common to all BR-Core actors used in this guide.
+    The conformance verbs -
+    <strong>SHALL</strong>
+    ,
+    <strong>SHOULD</strong>
+    ,
+    <strong>MAY</strong>
+    - used in this guide are defined in
+    <a href="http://hl7.org/fhir/R4/conformance-rules.html">FHIR Conformance Rules</a>
+    .
+  </p>
+
+  <hr />
+
+  <!-- TOC  the css styling for this is \pages\assets\css\project.css under 'markdown-toc'-->
+  <p>
+    <strong>Contents</strong>
+  </p>
+
+  <ul id="markdown-toc">
+    <li>
+      <a href="#claiming-conformance-to-a-br-core-profile" id="markdown-claiming-conformance-to-a-br-core-profile">Claiming Conformance to a BR-Core Profile</a>
+    </li>
+    <li>
+      <a href="#must-support" id="markdown-toc-must-support">Must Support</a>
+    </li>
+    <li>
+      <a href="#referencing-br-core-profiles" id="markdown-toc-referencing-br-core-profiles">Referencing BR-Core Profiles</a>
+    </li>
+    <li>
+      <a href="#missing-data" id="markdown-toc-missing-data">Missing Data</a>
+    </li>
+    <li>
+      <a href="#using-codes-in-br-core-profiles" id="markdown-toc-using-codes-in-br-core-profiles">Using Codes in BR-Core Profiles</a>
+    </li>
+    <li>
+      <a href="#readfetch-syntax" id="markdown-toc-readfetch-syntax">Read(Fetch) Syntax</a>
+    </li>
+    <li>
+      <a href="#search-syntax" id="markdown-toc-search-syntax">Search Syntax</a>
+    </li>
+    <li>
+      <a href="#search-for-servers-requiring-status" id="markdown-toc-search-for-servers-requiring-status">Search for Servers Requiring Status</a>
+    </li>
+    <li>
+      <a href="#searching-multiple-patients" id="markdown-toc-searching-multiple-patients">Searching Multiple Patients</a>
+    </li>
+    <li>
+      <a href="#compartment-based-search" id="markdown-toc-compartment-based-search">Compartment Based Search</a>
+    </li>
+    <li>
+      <a href="#across-platform-searches" id="markdown-toc-across-platform-searches">Across Platform Searches</a>
+    </li>
+    <li>
+      <a href="#guidance-on-limiting-the-number-of-search-results" id="markdown-toc-guidance-on-limiting-the-number-of-search-results">Guidance On Limiting The Number Of Search Results</a>
+    </li>
+  </ul>
+
+  <hr />
+
+  <p>The table below lists the BR-Core Profile and FHIR Resources used for the corresponding USCDI Data elements:</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Entities</th>
+        <th>BR-Core Profile</th>
+        <th>FHIR Resource</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Patients</td>
+        <td>
+          <a href="StructureDefinition-patient.html">BR-Core Patient Profile</a>
+        </td>
+        <td>Patient</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Practitioners</td>
+        <td>
+          <a href="StructureDefinition-practitioner.html">BR-Core Practitioner Profile</a>
+        </td>
+        <td>Procedure</td>
+        <td></td>
+      </tr>      
+    </tbody>
+  </table>
+
+  <h3 id="claiming-conformance-to-a-br-core-profile">Claiming Conformance to a BR-Core Profile</h3>
+
+  <p>
+    To claim conformance to a BR-Core Profile BR-Core Servers
+    <strong>SHALL</strong>
+    :
+  </p>
+
+  <ul>
+    <li>
+      Be able to populate all profile data elements that have a minimum cardinality &gt;= 1 and/or flagged as
+      <em>Must Support</em>
+      as defined by that profile’s StructureDefinition.
+    </li>
+    <li>
+      Conform to the BR-Core Server Capability Statement expectations for that profile’s type.
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      BR-Core Responders
+      <strong>SHALL</strong>
+      be capable of populating all data elements as part of the query results as specified by the
+      BR-Core Server Capability Statement.
+    </li>
+    <li>
+      BR-Core Requestors
+      <strong>SHALL</strong>
+      be capable of processing resource instances containing the data elements without generating an error or causing the application to fail. In other words BR-Core Requestors
+      <strong>SHOULD</strong>
+      be capable of displaying the data elements for human use or storing it for other purposes.
+    </li>
+    <li>
+      In situations where information on a particular data element is not present and the reason for absence is unknown, BR-Core Responders
+      <strong>SHALL NOT</strong>
+      include the data elements in the resource instance returned as part of the query results.
+    </li>
+    <li>
+      When querying BR-Core Responders, BR-Core Requestors
+      <strong>SHALL</strong>
+      interpret missing data elements within resource instances as data not present in the BR-Core Responder’s system.
+    </li>
+    <li>
+      In situations where information on a particular data element is missing and the BR-Core Responder knows the precise reason for the absence of data, BR-Core Responders
+      <strong>SHALL</strong>
+      send the reason for the missing information using values (such as nullFlavors) from the value set where they exist or using the dataAbsentReason extension.
+    </li>
+    <li>
+      <p>
+        BR-Core Requestors
+        <strong>SHALL</strong>
+        be able to process resource instances containing data elements asserting missing information.
+      </p>
+    </li>
+    <li>
+      NOTE: Typically
+      <em>BR-Core Responder</em>
+      Actor = Server and
+      <em>BR-Core Requestor Actor</em>
+      = Client
+    </li>
+    <li>
+      NOTE: The above definition of
+      <em>Must Support</em>
+      is derived from HL7v2 concept “Required but may be empty - RE” described in HL7v2 V28_CH02B_Conformance.doc.
+    </li>
+    <li>
+      NOTE: Readers are advised to understand
+      <a href="http://hl7.org/fhir/R4/terminologies.html">FHIR Terminology</a>
+      requirements,
+      <a href="http://hl7.org/fhir/R4/http.html">FHIR RESTful API</a>
+      based on the HTTP protocol, along with
+      <a href="http://hl7.org/fhir/R4/datatypes.html">FHIR Data Types</a>
+      ,
+      <a href="http://hl7.org/fhir/R4/search.html">FHIR Search</a>
+      and
+      <a href="http://hl7.org/fhir/R4/resource.html">FHIR Resource</a>
+      formats before implementing BR-Core requirements.
+    </li>
+  </ul>
+
+  <h3 id="referencing-br-core-profiles">Referencing BR-Core Profiles</h3>
+
+  <p>
+    Many of the profiles in this guide
+    <a href="http://hl7.org/fhir/R4/references.html">reference</a>
+    other FHIR resources that are also BR-Core Profiles.  This is defined in the formal profile definitions.  For example,
+    <a href="StructureDefinition-careteam.html">BR-Core CareTeam Profile</a>
+    references BR-Core Patient.  For any other references to base FHIR resources
+    <sup id="fnref:2" role="doc-noteref">
+      <a href="#fn:2" class="footnote">1</a>
+    </sup>
+    or not formally defined in a BR-Core Profiles, the referenced resource
+    <strong>SHOULD</strong>
+    be a BR-Core Profile if a BR-Core Profile exists for the resource type.  For example, although
+    <code class="highlighter-rouge">Condition.asserter</code>
+    is not constrained by this guide, the reference to Patient or Practitioner
+    <strong>SHOULD</strong>
+    be a valid BR-Core Patient or BR-Core Practitioner.  BR-Core Resources in the
+    <a href="http://hl7.org/fhir/R4/profiling.html#snapshot">differential view</a>
+    and marked as “Must Support” follow the Must Support rules listed above.  Other resources allowed in the base FHIR specification may be referenced even though the current publication framework does not display them.  For example, RelatedPerson is an allowed target reference in
+    <code class="highlighter-rouge">DocumentReference.author</code>
+    .
+  </p>
+
+  <h3 id="missing-data">Missing Data</h3>
+
+  <p>
+    If the source system does not have data for a
+    <em>Must Support</em>
+    data element, the data element is omitted from the resource as described above.  If the source system does not have data for a
+    <em>required</em>
+    data element (in other words, where the minimum cardinality is &gt; 0), the core specification provides guidance which is summarized below:
+  </p>
+
+  <ol>
+    <li>
+      For
+      <em>non-coded</em>
+      data elements, use the
+      <a href="http://hl7.org/fhir/R4/extension-data-absent-reason.html">DataAbsentReason Extension</a>
+      in the data type
+      <ul>
+        <li>
+          Use the code
+          <code class="highlighter-rouge">unknown</code>
+          - The value is expected to exist but is not known.
+        </li>
+      </ul>
+
+      <p>Example: Patient resource where the patient name is not available.</p>
+
+      <div class="highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight">
+            <code>{
+      "resourceType" : "Patient",
+           ...
+           "name": [
+             {
+               "extension": [
+                 {
+                   "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                   "valueCode": "unknown"
+                 }
+               ]
+             }
+           ]
+            "telecom" :
+            ...
+         }
+    </code>
+          </pre>
+        </div>
+      </div>
+    </li>
+    <li>
+      For
+      <em>coded</em>
+      data elements:
+      <ul>
+        <li>
+          <em>example</em>
+          ,
+          <em>preferred</em>
+          , or
+          <em>extensible</em>
+          binding strengths (CodeableConcept datatypes):
+          <ul>
+            <li>if the source systems has text but no coded data, only the text element is used.</li>
+            <li>
+              if there is neither text or coded data:
+              <ul>
+                <li>use the appropriate “unknown” concept code from the value set if available</li>
+                <li>
+                  if the value set does not have the appropriate “unknown” concept code, use
+                  <code class="highlighter-rouge">unknown</code>
+                  from the
+                  <a href="http://hl7.org/fhir/R4/codesystem-data-absent-reason.html">DataAbsentReason Code System</a>
+                  .
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <em>required</em>
+          binding strength (CodeableConcept or code datatypes):
+          <ul>
+            <li>use the appropriate “unknown” concept code from the value set if available</li>
+            <li>
+              For the following status elements no appropriate “unknown” concept code is available, therefore the element must be populated:
+              <ul>
+                <li>
+                  <code class="highlighter-rouge">AllergyIntolerance.clinicalStatus</code>
+                </li>
+                <li>
+                  <code class="highlighter-rouge">Condition.clinicalStatus</code>
+                </li>
+                <li>
+                  <code class="highlighter-rouge">DocumentReference.status</code>
+                </li>
+                <li>
+                  <code class="highlighter-rouge">Immunization.status</code>
+                </li>
+                <li>
+                  <code class="highlighter-rouge">Goal.lifecycleStatus</code>
+                </li>
+              </ul>
+
+              <p>
+                If one of these a status code is missing, a
+                <code class="highlighter-rouge">404</code>
+                http error code and an OperationOutcome
+                <strong>SHALL</strong>
+                be returned in response to a query for the resource.
+              </p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ol>
+
+  <h3 id="using-codes-in-br-core-profiles">Using Codes in BR-Core Profiles</h3>
+
+  <h4 class="no_toc" id="required-binding-for-codeableconcept-datatype">Required binding for CodeableConcept Datatype</h4>
+
+  <p>
+    Required binding to a value set definition means that one of the codes from the specified value set
+    <strong>SHALL</strong>
+    be used and using only text is not valid. Multiple codings (translations) are permitted as is discussed below.
+  </p>
+
+  <h4 class="no_toc" id="extensible-binding-for-codeableconcept-datatype">Extensible binding for CodeableConcept Datatype</h4>
+
+  <p>
+    Extensible binding to a value set definition for this IG means that if the data type is CodeableConcept, then one of the coding values
+    <strong>SHALL</strong>
+    be from the specified value set if a code applies, but if no suitable
+     code exists in the value set, alternate code(s) may be provided in its place. If only text available, then just text may be used.
+  </p>
+
+  <h4 class="no_toc" id="using-multiple-codes-with-codeableconcept-datatype">Using multiple codes with CodeableConcept Datatype</h4>
+
+  <p>Alternate codes may be provided in addition to the standard codes defined in required or extensible value sets. The alternate codes are called “translations”. These translations may be equivalent to or narrower in meaning to the standard concept code.</p>
+
+  <p>Example of multiple translation for Body Weight concept code.</p>
+
+  <div class="highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight">
+        <code>    "code": {
+            "coding": [
+             {
+                "system": "https://br-core.gointerop.com/fhir/codesystem-[company]-[system]-[entity]-[attribute]",  //NOTE:this is the standard concept defined in the value set//
+                "code": "[proprietary-codification]",
+                "display": "Body Weight"
+              },
+        //NOTE:this is a translation to a more specific concept
+             {
+                "system": "https://br-core.gointerop.com/fhir/codesystem-[company]-[system]-[entity]-[attribute]",
+                "code": "[proprietary-codification]",
+                "display": "Body Weight Measured"
+              }
+            ],
+            "text": "weight"
+          },
+    </code>
+      </pre>
+    </div>
+  </div>
+
+  <h4 class="no_toc" id="using-ucum-codes-in-the-quantity-datatype">
+    Using UCUM codes in the
+    <a href="http://hl7.org/fhir/R4/search.html#quantity">Quantity</a>
+    datatype
+  </h4>
+
+  <p>
+    Both the
+    <a href="http://hl7.org/fhir/R4/observation-vitalsigns.html">Vital Signs Profile</a>
+    and
+    <a href="StructureDefinition-observation.html">BR-Core Laboratory Result Observation Profile</a>
+    bind the
+    <code class="highlighter-rouge">valueQuantity</code>
+    datatypes to the
+    <a href="http://unitsofmeasure.org">UCUM</a>
+    code system.  A FHIR
+    <a href="http://hl7.org/fhir/R4/valueset-ucum-units.html">UCUM Codes value set</a>
+    that defines all UCUM codes is in the FHIR specification. This guidance specifies how to represent the Quantity datatype when the correct UCUM units are missing or the units are missing altogether which will likely occur in the real world.
+  </p>
+
+  <p>
+    <strong>UCUM code provided</strong>
+  </p>
+
+  <div class="highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight">
+        <code> "valueQuantity": {
+        "value": 26.0,
+        "unit": "g/mL"
+      }
+    </code>
+      </pre>
+    </div>
+  </div>
+
+  <p>
+    <strong>free text units only</strong>
+    :
+  </p>
+  <ul>
+    <li>
+      If UCUM units are not available then represent units in the
+      <code class="highlighter-rouge">unit</code>
+      element.
+    </li>
+  </ul>
+
+  <div class="highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight">
+        <code> "valueQuantity": {
+        "value": 26.0,
+        "unit": "RR",
+         }
+    </code>
+      </pre>
+    </div>
+  </div>
+
+  <p>
+    <strong>no units</strong>
+  </p>
+
+  <div class="highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight">
+        <code> "valueQuantity": {
+        "value": 26.0
+     }
+    </code>
+      </pre>
+    </div>
+  </div>
+
+  <h3 id="readfetch-syntax">Read(Fetch) Syntax</h3>
+
+  <p>For fetching a resource interactions on profile pages are defined with the following syntax:</p>
+
+  <p>
+    <strong>
+      <code class="highlighter-rouge">GET [base]/[Resource-type]/[id] {parameters}</code>
+    </strong>
+  </p>
+
+  <ul>
+    <li>GET is the HTTP verb used for fetching a resource</li>
+    <li>
+      Content surrounded by [] is mandatory
+      <em>for the client</em>
+      to supply, and will be replaced by the string literal identified.
+      <ul>
+        <li>
+          base: The Service Root URL (e.g. “
+          <a href="https://hapi.gointerop.com/hapi-fhir-server-connectathon/fhir/">https://hapi.gointerop.com/hapi-fhir-server-connectathon/fhir/</a>
+          ”)
+        </li>
+        <li>Resource-type: The name of a resource type (e.g. “Patient”)</li>
+        <li>id: The Logical Id of a resource(e.g. “24342”)</li>
+      </ul>
+    </li>
+    <li>
+      Content surrounded by {} is optional
+      <em>for the client</em>
+      to supply, and will be replaced by the string literal identified.
+      <ul>
+        <li>parameters: URL parameters as defined for the particular interaction (e.g.”?_format=xml”}</li>
+      </ul>
+    </li>
+  </ul>
+
+  <p>
+    For more information see the
+    <a href="http://hl7.org/fhir/R4/http.html">FHIR RESTful API</a>
+  </p>
+
+  <h3 id="search-syntax">Search Syntax</h3>
+
+  <p>For searching a resource, interactions on profile pages are defined with the following syntax:</p>
+
+  <p>
+    <strong>
+      <code class="highlighter-rouge">GET [base]/[Resource-type]?[parameter1]{:m1|m2|...}={c1|c2|...}[value1{,value2,...}]{&amp;[parameter2]{:m1|m2|...}={c1|c2|...}[value1{,value2,...}]&amp;...}</code>
+    </strong>
+  </p>
+
+  <ul>
+    <li>GET is the HTTP verb used for fetching a resource</li>
+    <li>
+      Variables surrounded by “[]” are mandatory
+      <em>for the client</em>
+      to supply, and will be replaced by the string literal identified.
+    </li>
+    <li>
+      Variables surrounded by “{}” are optional
+      <em>for the client</em>
+      to supply, and will be replaced by the string literal identified.
+      <ul>
+        <li>
+          base: The Service Root URL (e.g. “
+          <a href="https://hapi.gointerop.com/hapi-fhir-server-connectathon/fhir/">https://hapi.gointerop.com/hapi-fhir-server-connectathon/fhir/</a>
+          ”)
+        </li>
+        <li>Resource-type: The name of a resource type (e.g. “Patient”)</li>
+        <li>parameter: the search parameters as defined for the particular interaction (e.g.”?patient=Patient/123”)</li>
+        <li>
+          value: the search parameter value for a particular search
+          <ul>
+            <li>
+              note for values of type
+              <code class="highlighter-rouge">token</code>
+              <a href="http://hl7.org/fhir/R4/search.html#token">(how to search by token)</a>
+              , the syntax
+              <code class="highlighter-rouge">{system|}[code]</code>
+              means that the system value is optional
+              <em>for the client</em>
+              to supply
+            </li>
+          </ul>
+        </li>
+        <li>
+          <table>
+            <tbody>
+              <tr>
+                <td>{:m1</td>
+                <td>m2</td>
+                <td>…}: The list of supported search parameter modifiers</td>
+              </tr>
+            </tbody>
+          </table>
+        </li>
+        <li>
+          <table>
+            <tbody>
+              <tr>
+                <td>{c1</td>
+                <td>c2</td>
+                <td>…}: The list of supported search parameter comparators</td>
+              </tr>
+            </tbody>
+          </table>
+        </li>
+        <li>{,value2,…}: Optional multiple ‘OR’ Values</li>
+        <li>
+          <table>
+            <tbody>
+              <tr>
+                <td>{&amp;parameter2={:m1</td>
+                <td>m2</td>
+                <td>…}={c1</td>
+                <td>c2</td>
+                <td>…}[value1{,value2,…}&amp;…}: Optional multiple ‘AND’ search parameters</td>
+              </tr>
+            </tbody>
+          </table>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <p>In the simplest case, a search is executed by performing a GET operation in the RESTful framework:</p>
+
+  <p>
+    <code class="highlighter-rouge">GET [base]/[Resource-type]?name=value&amp;...</code>
+  </p>
+
+  <p>
+    For this RESTful search, the parameters are a series of name=[value] pairs encoded in the URL. The search parameter names are defined for each resource. For example, the Observation resource the name “code” for search on the LOINC code.  For more information see the
+    <a href="http://hl7.org/fhir/R4/search.html">FHIR RESTful Search API</a>
+  </p>
+
+  <p>
+    Note that the patient may be
+    <em>implicit</em>
+    in the context in some implementations (e.g. using SMART). Then the patient parameter can be omitted:
+  </p>
+
+  <p>
+    <code class="highlighter-rouge">GET [base]/[Resource-type]{?other-parameters}</code>
+  </p>
+
+  <h3 id="search-for-servers-requiring-status">Search for Servers Requiring Status</h3>
+
+  <p class="highlight-note">
+    Servers are
+    <em>strongly</em>
+    encouraged to support a query for resources
+    <em>without</em>
+    requiring a status parameter.  However, if business requirements prohibit this they
+    <strong>SHALL</strong>
+    follow the guidelines here.
+  </p>
+
+  <p>For searches where the client does not supply a status parameter, an implementation’s business rules may override the FHIR RESTful search expectations and require a status parameter to be provided.  These systems are allowed to reject such requests as follows:</p>
+
+  <ul>
+    <li>
+      <strong>SHALL</strong>
+      return an http
+      <code class="highlighter-rouge">400</code>
+      status
+    </li>
+    <li>
+      <strong>SHALL</strong>
+      return an
+      <a href="http://hl7.org/fhir/R4/operationoutcome.html">OperationOutcome</a>
+      specifying that status(es) must be present.
+    </li>
+    <li>
+      <strong>SHALL</strong>
+      support search with status if status required
+    </li>
+    <li>
+      <strong>SHALL NOT</strong>
+      restrict search results ( i.e. apply ‘hidden’ filters) when a client includes status parameters in the query.
+      <ul>
+        <li>
+          <p>
+            If a system doesn’t support a specific status code value that is queried, search results
+            <strong>SHOULD</strong>
+            return an http
+            <code class="highlighter-rouge">200</code>
+            status with search bundle containing resources matching the search criteria
+            <em>and</em>
+            an OperationOutcome warning the client which status code value is not supported.
+          </p>
+        </li>
+        <li>
+          <p>
+            For example, in a query enumerating all the
+            <code class="highlighter-rouge">AllergyIntolerance.verificationStatus</code>
+            statuses to a system that supports concepts
+            <code class="highlighter-rouge">unconfirmed</code>
+            ,
+            <code class="highlighter-rouge">confirmed</code>
+            ,
+            <code class="highlighter-rouge">entered-in-error</code>
+            but not
+            <code class="highlighter-rouge">refuted</code>
+            , the search parameter is referring to an unsupported code since
+            <code class="highlighter-rouge">refuted</code>
+            is not known to the server.
+          </p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <p>
+    <button class="btn-sm btn-info" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#missing-status" aria-expanded="false" aria-controls="collapseExample">
+        Click Here to See a Rejected Search Due to Missing Status Example
+      </button>
+  </p>
+
+  <div class="collapse" id="missing-status">
+    <div class="card card-body">
+
+      <p>
+        <strong>Storyboard for this example</strong>
+      </p>
+
+      <p>This example is based upon the following scenario:</p>
+
+      <p>
+        Patient 1137192 uses an App to request all his encounters from the provider. The provider system requires status and rejects the request returning a
+        <code class="highlighter-rouge">400</code>
+        and an OperationOutcome specifying that a status parameter is required for this search.
+      </p>
+
+      <p>
+        <strong>Request:</strong>
+      </p>
+
+      <p>Get “all encounters” for a patient 1137192 by querying Encounter using the patient search parameter.</p>
+
+      <div class="highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight">
+            <code>GET [base]/Encounter?patient=1137192
+    </code>
+          </pre>
+        </div>
+      </div>
+
+      <p>
+        <strong>Response:</strong>
+      </p>
+
+      <p>
+        Instead of returning a search Bundle resource containing all the Encounter for the patient, the server return a
+        <code class="highlighter-rouge">400 Not Found</code>
+        and an OperationOutcome detailing hat a status parameter is required for this search.
+      </p>
+
+      <div class="highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight">
+            <code>HTTP/1.1 400 Not Found
+    [other headers]
+    {
+      "resourceType": "OperationOutcome",
+      "id": "no-status",
+      "issue": [
+        {
+          "severity": "error",
+          "code": "business-rule",
+          "details": {
+            "text": "A \"status\" search parameter is required for this search"
+          },
+          "diagnostics": "valid statuses for Encounter include planned | arrived | triaged | in-progress | onleave | finished | cancelled | entered-in-error | unknown"
+        }
+      ]
+    }
+    </code>
+          </pre>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <p>
+    <br />
+  </p>
+
+  <ul>
+    <li>
+      <strong>SHALL</strong>
+      document this behavior in its CapabilityStatement for the “search-type” interaction in
+      <code class="highlighter-rouge">CapabilityStatement.rest.resource.interaction.documentation</code>
+      .
+    </li>    
+  </ul>
+
+  <h3 id="searching-multiple-patients">Searching Multiple Patients</h3>
+
+  <p>
+    Currently, most EHRs permit queries that provide a single patient id, but do not support the comma separated query or a query where the patient parameter is omitted as described in the standard FHIR REST API. Instead, a user facing app can perform multiple “parallel” queries on a list of patient ids.  Alternatively, the
+    <a href="http://hl7.org/fhir/uv/bulkdata/STU1/">FHIR Bulk Data Access (Flat FHIR)</a>
+    specification can be used to perform a “back end” system level query to access a large volumes of information on a group of individuals or when trying to identify and query against an unknown population such as when looking for population based research data.
+  </p>
+
+  <h3 id="compartment-based-search">Compartment Based Search</h3>
+
+  <p>
+    This IG does not support patient
+    <a href="http://hl7.org/fhir/R4/compartmentdefinition.html">compartment</a>
+    based searches.
+  </p>
+
+  <h3 id="across-platform-searches">Across Platform Searches</h3>
+
+  <p>BR-Core servers are not required to resolve full URLs that are external to their environment.</p>
+
+  <h3 id="guidance-on-limiting-the-number-of-search-results">Guidance On Limiting The Number Of Search Results</h3>
+
+  <p>
+    In order to manage the number of search results returned, the server may choose to return the results in a series of pages. The search result set contains the URLs that the client uses to request additional pages from the search set. For a simple RESTful search, the page links are contained in the returned bundle as links. See the
+    <a href="http://hl7.org/fhir/R4/search.html#return">managing returned resources</a>
+    in the FHIR specification for more information.
+  </p>
+
+  <hr />
+  <!--
+    [^1]: https://en.wikipedia.org/w/index.php?title=UTC_offset#Time_zones_and_time_offsets
+    -->
+
+  <div class="footnotes" role="doc-endnotes">
+    <ol>
+      <li id="fn:2" role="doc-endnote">
+        <p>
+          For example, the base Location resource is being referenced by the BR-Core Encounter and BR-Core PractitionerRole resources.
+          <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a>
+        </p>
+      </li>      
+    </ol>
+  </div>
+</div>

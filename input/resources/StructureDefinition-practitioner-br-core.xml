@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://br-core.gointerop.com/fhir/StructureDefinition/Practitioner" />
+  <url value="https://br-core.gointerop.com/fhir/StructureDefinition/practitioner" />
   <name value="Practitioner" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />

@@ -1,0 +1,17 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+    <a name="profiles"></a>
+    <h3 id="profiles">BR-Core profiles</h3>
+    
+<p>The following Profiles and have been defined for this implementation guide.</p>
+
+<li><a href="StructureDefinition-patient.html">BR-Core Patient Profile</a></li>
+<li><a href="StructureDefinition-practitioner.html">BR-Core Practitioner Profile</a></li>
+
+<!--<h3 id="terminologies">Terminologies</h3>
+
+<p> The following Naming Systems have been defined as part of the BR-Core implementation Guide.</p>
+<ul>
+<li><a href="NamingSystem-govbr-receitafederal-pessoajuridica-id.html">Cadastro de Pessoa Jurídica da Receita Federal</a></li>
+</ul>-->
+
+  </div>

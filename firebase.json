@@ -1,0 +1,33 @@
+{
+  "hosting": {
+    "cleanUrls": false,
+    "public": "output",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "redirects": [
+      {
+        "source": "/fhir/",
+        "destination": "/fhir/index.html",
+        "type": 301
+      },
+      {
+        "source": "/fhir/artifacts",
+        "destination": "/fhir/artifacts.html",
+        "type": 301
+      },
+      {
+        "source": "/fhir/StructureDefinition/patient",
+        "destination": "/fhir/StructureDefinition-patient.html",
+        "type": 301
+      },
+      {
+        "source": "/fhir/StructureDefinition/practitioner",
+        "destination": "/fhir/StructureDefinition-practitioner.html",
+        "type": 301
+      } 
+    ]
+  }
+}
