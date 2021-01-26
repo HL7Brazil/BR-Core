@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://br-core.gointerop.com/fhir/StructureDefinition/Patient" />
+  <version value="0.1.0" />
   <name value="Patient" />
+  <title value="Patient" />
   <status value="draft" />
+  <date value="2021-01-26" />
+  <publisher value="HL7 Brasil" />
+  <description value="Perfil de paciente." />
+  <copyright value="Copyright 2021 Instituto HL7 Brasil.&#xD;&#xA;&#xD;&#xA;Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);&#xD;&#xA;you may not use this file except in compliance with the License.&#xD;&#xA;You may obtain a copy of the License at&#xD;&#xA;&#xD;&#xA;    http://www.apache.org/licenses/LICENSE-2.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software&#xD;&#xA;distributed under the License is distributed on an &quot;AS IS&quot; BASIS,&#xD;&#xA;WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.&#xD;&#xA;See the License for the specific language governing permissions and&#xD;&#xA;limitations under the License." />
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="rim" />
@@ -59,12 +65,6 @@
       <min value="1" />
     </element>
     <element id="Patient.identifier:cpf">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Patient.identifier" />
       <sliceName value="cpf" />
     </element>
@@ -84,12 +84,6 @@
       <patternString value="[0-9]{11}" />
     </element>
     <element id="Patient.identifier:cns">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Patient.identifier" />
       <sliceName value="cns" />
     </element>
@@ -182,7 +176,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <min value="1" />
+      <min value="5" />
       <max value="5" />
     </element>
     <element id="Patient.address.line:streetType">
@@ -226,11 +220,61 @@
       <path value="Patient.address.country" />
       <min value="1" />
     </element>
-    <element id="Patient.contact">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Contact" />
+    <element id="Patient.maritalStatus.coding">
+      <path value="Patient.maritalStatus.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Patient.maritalStatus.coding.system">
+      <path value="Patient.maritalStatus.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Patient.maritalStatus.coding.code">
+      <path value="Patient.maritalStatus.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Patient.maritalStatus.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
       </extension>
-      <path value="Patient.contact" />
+      <path value="Patient.maritalStatus.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Patient.contact.name">
+      <path value="Patient.contact.name" />
+      <min value="1" />
+    </element>
+    <element id="Patient.contact.name.use">
+      <path value="Patient.contact.name.use" />
+      <min value="1" />
+    </element>
+    <element id="Patient.contact.name.text">
+      <path value="Patient.contact.name.text" />
+      <min value="1" />
+    </element>
+    <element id="Patient.contact.telecom.system">
+      <path value="Patient.contact.telecom.system" />
+      <min value="1" />
+    </element>
+    <element id="Patient.contact.telecom.value">
+      <path value="Patient.contact.telecom.value" />
+      <min value="1" />
+    </element>
+    <element id="Patient.generalPractitioner.reference">
+      <path value="Patient.generalPractitioner.reference" />
+      <min value="1" />
+    </element>
+    <element id="Patient.generalPractitioner.type">
+      <path value="Patient.generalPractitioner.type" />
+      <min value="1" />
+    </element>
+    <element id="Patient.managingOrganization.reference">
+      <path value="Patient.managingOrganization.reference" />
+      <min value="1" />
+    </element>
+    <element id="Patient.managingOrganization.type">
+      <path value="Patient.managingOrganization.type" />
+      <min value="1" />
     </element>
   </differential>
 </StructureDefinition>
