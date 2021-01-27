@@ -17,7 +17,7 @@
     <telecom>
       <!-- Or whatever URL and/or email address(es) are appropriate -->
       <system value="url"/>
-      <value value="https://hl7.com.br"/>
+      <value value="http://hl7.com.br"/>
     </telecom>
   </contact>
   <description value="O Guia de Implementacao do BR-Core e baseado no FHIR na versao R4 e define o minimo de requisitos de conformidade para acessar dados do paciente em territorio brasileiro."/>
