@@ -45,8 +45,9 @@
 
 <p>The list of BR-Core Profiles is shown below.  Each profile defines the minimum mandatory elements, extensions and terminology requirements that <strong>MUST</strong> be present. For each profile, requirements and guidance are given in a simple narrative summary. A formal hierarchical table that presents a <a href="http://hl7.org/fhir/R4/formats.html#table">logical view</a> of the content in both a differential and snapshot view is also provided along with references to appropriate terminologies and examples.  For each BR-Core Profile, an overview of the required set of RESTful FHIR interactions - for example, search and read operations - is provided in the <em>Quick Start</em> Section of the profile page.</p>
 
-<li><a href="StructureDefinition-patient.html">BR-Core Patient Profile</a></li>
-<li><a href="StructureDefinition-practitioner.html">BR-Core Practitioner Profile</a></li>
+<li><a href="StructureDefinition-Patient.html">BR-Core Patient Profile</a></li>
+<li><a href="StructureDefinition-Practitioner.html">BR-Core Practitioner Profile</a></li>
+<li><a href="StructureDefinition-Organization.html">BR-Core Organization Profile</a></li>
 
 
 <hr />

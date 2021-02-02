@@ -19,15 +19,20 @@
         "type": 301
       },
       {
-        "source": "/fhir/StructureDefinition/patient",
-        "destination": "/fhir/StructureDefinition-patient.html",
+        "source": "/fhir/StructureDefinition/Patient",
+        "destination": "/fhir/StructureDefinition-Patient.html",
         "type": 301
       },
       {
-        "source": "/fhir/StructureDefinition/practitioner",
-        "destination": "/fhir/StructureDefinition-practitioner.html",
+        "source": "/fhir/StructureDefinition/Practitioner",
+        "destination": "/fhir/StructureDefinition-Practitioner.html",
         "type": 301
-      } 
+      },
+      {
+        "source": "/fhir/StructureDefinition/Organization",
+        "destination": "/fhir/StructureDefinition-Organization.html",
+        "type": 301
+      }
     ]
   }
 }

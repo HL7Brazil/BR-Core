@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Organization" />
+  <url value="https://br-core.gointerop.com/StructureDefinition/Organization" />
+  <version value="0.1.0" />
+  <name value="Organization" />
+  <title value="Organization" />
+  <status value="draft" />
+  <date value="2021-02-02" />
+  <publisher value="HL7 Brasil" />
+  <copyright value="Copyright 2021 Instituto HL7 Brasil.&#xD;&#xA;&#xD;&#xA;Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);&#xD;&#xA;you may not use this file except in compliance with the License.&#xD;&#xA;You may obtain a copy of the License at&#xD;&#xA;&#xD;&#xA;    http://www.apache.org/licenses/LICENSE-2.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software&#xD;&#xA;distributed under the License is distributed on an &quot;AS IS&quot; BASIS,&#xD;&#xA;WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.&#xD;&#xA;See the License for the specific language governing permissions and&#xD;&#xA;limitations under the License." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="servd" />
+    <uri value="http://www.omg.org/spec/ServD/1.0/" />
+    <name value="ServD" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Organization" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Organization" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Organization.identifier">
+      <path value="Organization.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Organization.identifier.use">
+      <path value="Organization.identifier.use" />
+      <min value="1" />
+    </element>
+    <element id="Organization.identifier.system">
+      <path value="Organization.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Organization.identifier.value">
+      <path value="Organization.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Organization.identifier:cnpj">
+      <path value="Organization.identifier" />
+      <sliceName value="cnpj" />
+      <max value="1" />
+    </element>
+    <element id="Organization.identifier:cnpj.use">
+      <path value="Organization.identifier.use" />
+      <min value="1" />
+      <fixedCode value="official" />
+    </element>
+    <element id="Organization.identifier:cnpj.system">
+      <path value="Organization.identifier.system" />
+      <min value="1" />
+      <fixedUri value="http://rnds.saude.gov.br/fhir/r4/NamingSystem/cnpj" />
+    </element>
+    <element id="Organization.identifier:cnpj.value">
+      <path value="Organization.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Organization.identifier:cnes">
+      <path value="Organization.identifier" />
+      <sliceName value="cnes" />
+    </element>
+    <element id="Organization.identifier:cnes.use">
+      <path value="Organization.identifier.use" />
+      <min value="1" />
+      <fixedCode value="official" />
+    </element>
+    <element id="Organization.identifier:cnes.system">
+      <path value="Organization.identifier.system" />
+      <min value="1" />
+      <fixedUri value="http://rnds.saude.gov.br/fhir/r4/NamingSystem/cnes" />
+    </element>
+    <element id="Organization.identifier:cnes.value">
+      <path value="Organization.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Organization.type">
+      <path value="Organization.type" />
+      <min value="1" />
+    </element>
+    <element id="Organization.type.coding">
+      <path value="Organization.type.coding" />
+      <min value="1" />
+    </element>
+    <element id="Organization.type.coding.system">
+      <path value="Organization.type.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Organization.type.coding.code">
+      <path value="Organization.type.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Organization.type.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Organization.type.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Organization.name">
+      <path value="Organization.name" />
+      <min value="1" />
+    </element>
+    <element id="Organization.alias">
+      <path value="Organization.alias" />
+      <min value="1" />
+    </element>
+    <element id="Organization.telecom">
+      <path value="Organization.telecom" />
+      <min value="1" />
+    </element>
+    <element id="Organization.telecom.system">
+      <path value="Organization.telecom.system" />
+      <min value="1" />
+    </element>
+    <element id="Organization.telecom.value">
+      <path value="Organization.telecom.value" />
+      <min value="1" />
+    </element>
+    <element id="Organization.telecom.use">
+      <path value="Organization.telecom.use" />
+      <min value="1" />
+    </element>
+    <element id="Organization.address">
+      <path value="Organization.address" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="line" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Organization.address.use">
+      <path value="Organization.address.use" />
+      <min value="1" />
+    </element>
+    <element id="Organization.address.type">
+      <path value="Organization.address.type" />
+      <min value="1" />
+    </element>
+    <element id="Organization.address.text">
+      <path value="Organization.address.text" />
+      <min value="1" />
+    </element>
+    <element id="Organization.address.line">
+      <path value="Organization.address.line" />
+      <slicing>
+        <discriminator>
+          <type value="exists" />
+          <path value="value" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="5" />
+      <max value="5" />
+    </element>
+    <element id="Organization.address.line:streetType">
+      <path value="Organization.address.line" />
+      <sliceName value="streetType" />
+      <max value="1" />
+    </element>
+    <element id="Organization.address.line:street">
+      <path value="Organization.address.line" />
+      <sliceName value="street" />
+      <max value="1" />
+    </element>
+    <element id="Organization.address.line:number">
+      <path value="Organization.address.line" />
+      <sliceName value="number" />
+      <max value="1" />
+    </element>
+    <element id="Organization.address.line:complement">
+      <path value="Organization.address.line" />
+      <sliceName value="complement" />
+      <max value="1" />
+    </element>
+    <element id="Organization.address.line:neighborhood">
+      <path value="Organization.address.line" />
+      <sliceName value="neighborhood" />
+      <max value="1" />
+    </element>
+    <element id="Organization.address.city">
+      <path value="Organization.address.city" />
+      <min value="1" />
+    </element>
+    <element id="Organization.address.state">
+      <path value="Organization.address.state" />
+      <min value="1" />
+    </element>
+    <element id="Organization.address.postalCode">
+      <path value="Organization.address.postalCode" />
+      <min value="1" />
+    </element>
+    <element id="Organization.address.country">
+      <path value="Organization.address.country" />
+      <min value="1" />
+    </element>
+    <element id="Organization.partOf.reference">
+      <path value="Organization.partOf.reference" />
+      <min value="1" />
+    </element>
+    <element id="Organization.partOf.type">
+      <path value="Organization.partOf.type" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>
