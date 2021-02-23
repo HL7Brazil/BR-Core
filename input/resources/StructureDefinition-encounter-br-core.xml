@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Encounter" />
+  <url value="https://br-core.gointerop.com/fhir/StructureDefinition/Encounter" />
+  <name value="Encounter" />
+  <title value="Encounter" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Pattern" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Encounter" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Encounter" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Encounter.identifier">
+      <path value="Encounter.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Encounter.identifier.use">
+      <path value="Encounter.identifier.use" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.identifier.system">
+      <path value="Encounter.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.identifier.value">
+      <path value="Encounter.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.identifier:sliceBRRNDS">
+      <path value="Encounter.identifier" />
+      <sliceName value="sliceBRRNDS" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Encounter.identifier:sliceBRRNDS.use">
+      <path value="Encounter.identifier.use" />
+      <min value="1" />
+      <fixedCode value="official" />
+    </element>
+    <element id="Encounter.identifier:sliceBRRNDS.system">
+      <path value="Encounter.identifier.system" />
+      <min value="1" />
+      <patternUri value="http://www.saude.gov.br/fhir/r4/NamingSystem/BRRNDS-*" />
+    </element>
+    <element id="Encounter.identifier:sliceBRRNDS.value">
+      <path value="Encounter.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.class.system">
+      <path value="Encounter.class.system" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.class.code">
+      <path value="Encounter.class.code" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.class.display">
+      <path value="Encounter.class.display" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.subject">
+      <path value="Encounter.subject" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.subject.reference">
+      <path value="Encounter.subject.reference" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.subject.type">
+      <path value="Encounter.subject.type" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.participant">
+      <path value="Encounter.participant" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="individual.type" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Encounter.participant.individual">
+      <path value="Encounter.participant.individual" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.participant.individual.reference">
+      <path value="Encounter.participant.individual.reference" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.participant.individual.type">
+      <path value="Encounter.participant.individual.type" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.participant:slicePractitioner">
+      <path value="Encounter.participant" />
+      <sliceName value="slicePractitioner" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.participant:slicePractitioner.individual">
+      <path value="Encounter.participant.individual" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.participant:slicePractitioner.individual.reference">
+      <path value="Encounter.participant.individual.reference" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.participant:slicePractitioner.individual.type">
+      <path value="Encounter.participant.individual.type" />
+      <min value="1" />
+      <fixedUri value="Practitioner" />
+    </element>
+    <element id="Encounter.appointment.reference">
+      <path value="Encounter.appointment.reference" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.appointment.type">
+      <path value="Encounter.appointment.type" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.period">
+      <path value="Encounter.period" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.reasonCode">
+      <path value="Encounter.reasonCode" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.reasonCode.coding">
+      <path value="Encounter.reasonCode.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Encounter.reasonCode.coding.system">
+      <path value="Encounter.reasonCode.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.reasonCode.coding.code">
+      <path value="Encounter.reasonCode.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.reasonCode.coding.display">
+      <path value="Encounter.reasonCode.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.reasonCode.coding:sliceCID">
+      <path value="Encounter.reasonCode.coding" />
+      <sliceName value="sliceCID" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.reasonCode.coding:sliceCID.system">
+      <path value="Encounter.reasonCode.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://hl7.org/fhir/sid/icd-10" />
+    </element>
+    <element id="Encounter.reasonCode.coding:sliceCID.code">
+      <path value="Encounter.reasonCode.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.reasonCode.coding:sliceCID.display">
+      <path value="Encounter.reasonCode.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.reasonCode.coding:sliceCIAP2">
+      <path value="Encounter.reasonCode.coding" />
+      <sliceName value="sliceCIAP2" />
+    </element>
+    <element id="Encounter.reasonCode.coding:sliceCIAP2.system">
+      <path value="Encounter.reasonCode.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRCIAP2" />
+    </element>
+    <element id="Encounter.reasonCode.coding:sliceCIAP2.code">
+      <path value="Encounter.reasonCode.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.reasonCode.coding:sliceCIAP2.display">
+      <path value="Encounter.reasonCode.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.reasonReference.reference">
+      <path value="Encounter.reasonReference.reference" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.reasonReference.type">
+      <path value="Encounter.reasonReference.type" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.diagnosis.condition.reference">
+      <path value="Encounter.diagnosis.condition.reference" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.diagnosis.condition.type">
+      <path value="Encounter.diagnosis.condition.type" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.hospitalization.origin.reference">
+      <path value="Encounter.hospitalization.origin.reference" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.hospitalization.origin.type">
+      <path value="Encounter.hospitalization.origin.type" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.hospitalization.admitSource.coding">
+      <path value="Encounter.hospitalization.admitSource.coding" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.hospitalization.admitSource.coding.system">
+      <path value="Encounter.hospitalization.admitSource.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.hospitalization.admitSource.coding.code">
+      <path value="Encounter.hospitalization.admitSource.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.hospitalization.admitSource.coding.display">
+      <path value="Encounter.hospitalization.admitSource.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.hospitalization.reAdmission.coding">
+      <path value="Encounter.hospitalization.reAdmission.coding" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.hospitalization.reAdmission.coding.system">
+      <path value="Encounter.hospitalization.reAdmission.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.hospitalization.reAdmission.coding.code">
+      <path value="Encounter.hospitalization.reAdmission.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.hospitalization.reAdmission.coding.display">
+      <path value="Encounter.hospitalization.reAdmission.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.hospitalization.dietPreference.coding">
+      <path value="Encounter.hospitalization.dietPreference.coding" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.hospitalization.dietPreference.coding.system">
+      <path value="Encounter.hospitalization.dietPreference.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.hospitalization.dietPreference.coding.code">
+      <path value="Encounter.hospitalization.dietPreference.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.hospitalization.dietPreference.coding.display">
+      <path value="Encounter.hospitalization.dietPreference.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.hospitalization.specialCourtesy.coding">
+      <path value="Encounter.hospitalization.specialCourtesy.coding" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.hospitalization.specialCourtesy.coding.system">
+      <path value="Encounter.hospitalization.specialCourtesy.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.hospitalization.specialCourtesy.coding.code">
+      <path value="Encounter.hospitalization.specialCourtesy.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.hospitalization.specialCourtesy.coding.display">
+      <path value="Encounter.hospitalization.specialCourtesy.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.hospitalization.specialArrangement.coding">
+      <path value="Encounter.hospitalization.specialArrangement.coding" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.hospitalization.specialArrangement.coding.system">
+      <path value="Encounter.hospitalization.specialArrangement.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.hospitalization.specialArrangement.coding.code">
+      <path value="Encounter.hospitalization.specialArrangement.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.hospitalization.specialArrangement.coding.display">
+      <path value="Encounter.hospitalization.specialArrangement.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.hospitalization.destination.reference">
+      <path value="Encounter.hospitalization.destination.reference" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.hospitalization.destination.type">
+      <path value="Encounter.hospitalization.destination.type" />
+      <min value="1" />
+      <fixedUri value="Organization" />
+    </element>
+    <element id="Encounter.location.location.reference">
+      <path value="Encounter.location.location.reference" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.location.location.type">
+      <path value="Encounter.location.location.type" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.location.physicalType.coding">
+      <path value="Encounter.location.physicalType.coding" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.location.physicalType.coding.system">
+      <path value="Encounter.location.physicalType.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.location.physicalType.coding.code">
+      <path value="Encounter.location.physicalType.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.location.physicalType.coding.display">
+      <path value="Encounter.location.physicalType.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.serviceProvider">
+      <path value="Encounter.serviceProvider" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.serviceProvider.reference">
+      <path value="Encounter.serviceProvider.reference" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.serviceProvider.type">
+      <path value="Encounter.serviceProvider.type" />
+      <min value="1" />
+      <fixedUri value="Organization" />
+    </element>
+    <element id="Encounter.partOf.reference">
+      <path value="Encounter.partOf.reference" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.partOf.type">
+      <path value="Encounter.partOf.type" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>

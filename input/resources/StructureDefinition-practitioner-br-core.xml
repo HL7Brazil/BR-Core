@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="Practitioner" />
-  <url value="https://br-core.gointerop.com/fhir/StructureDefinition/practitioner" />
+  <url value="https://br-core.gointerop.com/fhir/StructureDefinition/Practitioner" />
   <version value="0.1.0" />
   <name value="Practitioner" />
   <title value="Practitioner" />

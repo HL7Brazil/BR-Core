@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="Patient" />
-  <url value="https://br-core.gointerop.com/fhir/StructureDefinition/patient" />
+  <url value="https://br-core.gointerop.com/fhir/StructureDefinition/Patient" />
   <version value="0.1.0" />
   <name value="Patient" />
   <title value="Patient" />
@@ -235,9 +235,6 @@
       <min value="1" />
     </element>
     <element id="Patient.maritalStatus.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Patient.maritalStatus.coding.display" />
       <min value="1" />
     </element>
