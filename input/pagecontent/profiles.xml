@@ -4,6 +4,7 @@
     
 <p>The following Profiles and have been defined for this implementation guide.</p>
 
+<li><a href="StructureDefinition-Encounter.html">BR-Core Encounter Profile</a></li>
 <li><a href="StructureDefinition-Patient.html">BR-Core Patient Profile</a></li>
 <li><a href="StructureDefinition-Practitioner.html">BR-Core Practitioner Profile</a></li>
 <li><a href="StructureDefinition-Organization.html">BR-Core Organization Profile</a></li>

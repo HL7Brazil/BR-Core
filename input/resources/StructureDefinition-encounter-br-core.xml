@@ -34,6 +34,7 @@
   <differential>
     <element id="Encounter.identifier">
       <path value="Encounter.identifier" />
+<<<<<<< HEAD
       <slicing>
         <discriminator>
           <type value="value" />
@@ -41,11 +42,17 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+=======
+>>>>>>> cd5aa2218e8e51511b6b86d64fb1de6b58e08c70
       <min value="1" />
     </element>
     <element id="Encounter.identifier.use">
       <path value="Encounter.identifier.use" />
       <min value="1" />
+<<<<<<< HEAD
+=======
+      <fixedCode value="official" />
+>>>>>>> cd5aa2218e8e51511b6b86d64fb1de6b58e08c70
     </element>
     <element id="Encounter.identifier.system">
       <path value="Encounter.identifier.system" />
@@ -55,6 +62,7 @@
       <path value="Encounter.identifier.value" />
       <min value="1" />
     </element>
+<<<<<<< HEAD
     <element id="Encounter.identifier:sliceBRRNDS">
       <path value="Encounter.identifier" />
       <sliceName value="sliceBRRNDS" />
@@ -85,6 +93,70 @@
     </element>
     <element id="Encounter.class.display">
       <path value="Encounter.class.display" />
+=======
+    <element id="Encounter.class.system">
+      <path value="Encounter.class.system" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.class.code">
+      <path value="Encounter.class.code" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.class.display">
+      <path value="Encounter.class.display" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.type.coding">
+      <path value="Encounter.type.coding" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.type.coding.system">
+      <path value="Encounter.type.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.type.coding.code">
+      <path value="Encounter.type.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.type.coding.display">
+      <path value="Encounter.type.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.serviceType.coding">
+      <path value="Encounter.serviceType.coding" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.serviceType.coding.system">
+      <path value="Encounter.serviceType.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.serviceType.coding.code">
+      <path value="Encounter.serviceType.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.serviceType.coding.display">
+      <path value="Encounter.serviceType.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.priority">
+      <path value="Encounter.priority" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.priority.coding">
+      <path value="Encounter.priority.coding" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.priority.coding.system">
+      <path value="Encounter.priority.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.priority.coding.code">
+      <path value="Encounter.priority.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.priority.coding.display">
+      <path value="Encounter.priority.coding.display" />
+>>>>>>> cd5aa2218e8e51511b6b86d64fb1de6b58e08c70
       <min value="1" />
     </element>
     <element id="Encounter.subject">
@@ -99,6 +171,7 @@
       <path value="Encounter.subject.type" />
       <min value="1" />
     </element>
+<<<<<<< HEAD
     <element id="Encounter.participant">
       <path value="Encounter.participant" />
       <slicing>
@@ -139,6 +212,56 @@
       <path value="Encounter.participant.individual.type" />
       <min value="1" />
       <fixedUri value="Practitioner" />
+=======
+    <element id="Encounter.episodeOfCare.reference">
+      <path value="Encounter.episodeOfCare.reference" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.episodeOfCare.type">
+      <path value="Encounter.episodeOfCare.type" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.basedOn.reference">
+      <path value="Encounter.basedOn.reference" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.basedOn.type">
+      <path value="Encounter.basedOn.type" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.participant.type">
+      <path value="Encounter.participant.type" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Encounter.participant.type.coding">
+      <path value="Encounter.participant.type.coding" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.participant.type.coding.system">
+      <path value="Encounter.participant.type.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.participant.type.coding.code">
+      <path value="Encounter.participant.type.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.participant.type.coding.display">
+      <path value="Encounter.participant.type.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.participant.individual">
+      <path value="Encounter.participant.individual" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.participant.individual.reference">
+      <path value="Encounter.participant.individual.reference" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.participant.individual.type">
+      <path value="Encounter.participant.individual.type" />
+      <min value="1" />
+>>>>>>> cd5aa2218e8e51511b6b86d64fb1de6b58e08c70
     </element>
     <element id="Encounter.appointment.reference">
       <path value="Encounter.appointment.reference" />
@@ -152,6 +275,7 @@
       <path value="Encounter.period" />
       <min value="1" />
     </element>
+<<<<<<< HEAD
     <element id="Encounter.reasonCode">
       <path value="Encounter.reasonCode" />
       <min value="1" />
@@ -211,6 +335,37 @@
       <min value="1" />
     </element>
     <element id="Encounter.reasonCode.coding:sliceCIAP2.display">
+=======
+    <element id="Encounter.period.start">
+      <path value="Encounter.period.start" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.period.end">
+      <path value="Encounter.period.end" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.length.value">
+      <path value="Encounter.length.value" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.length.unit">
+      <path value="Encounter.length.unit" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.reasonCode.coding">
+      <path value="Encounter.reasonCode.coding" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.reasonCode.coding.system">
+      <path value="Encounter.reasonCode.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.reasonCode.coding.code">
+      <path value="Encounter.reasonCode.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.reasonCode.coding.display">
+>>>>>>> cd5aa2218e8e51511b6b86d64fb1de6b58e08c70
       <path value="Encounter.reasonCode.coding.display" />
       <min value="1" />
     </element>
@@ -222,6 +377,13 @@
       <path value="Encounter.reasonReference.type" />
       <min value="1" />
     </element>
+<<<<<<< HEAD
+=======
+    <element id="Encounter.diagnosis">
+      <path value="Encounter.diagnosis" />
+      <min value="1" />
+    </element>
+>>>>>>> cd5aa2218e8e51511b6b86d64fb1de6b58e08c70
     <element id="Encounter.diagnosis.condition.reference">
       <path value="Encounter.diagnosis.condition.reference" />
       <min value="1" />
@@ -230,12 +392,25 @@
       <path value="Encounter.diagnosis.condition.type" />
       <min value="1" />
     </element>
+<<<<<<< HEAD
     <element id="Encounter.hospitalization.origin.reference">
       <path value="Encounter.hospitalization.origin.reference" />
       <min value="1" />
     </element>
     <element id="Encounter.hospitalization.origin.type">
       <path value="Encounter.hospitalization.origin.type" />
+=======
+    <element id="Encounter.account.reference">
+      <path value="Encounter.account.reference" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.account.type">
+      <path value="Encounter.account.type" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.hospitalization.admitSource">
+      <path value="Encounter.hospitalization.admitSource" />
+>>>>>>> cd5aa2218e8e51511b6b86d64fb1de6b58e08c70
       <min value="1" />
     </element>
     <element id="Encounter.hospitalization.admitSource.coding">
@@ -254,6 +429,7 @@
       <path value="Encounter.hospitalization.admitSource.coding.display" />
       <min value="1" />
     </element>
+<<<<<<< HEAD
     <element id="Encounter.hospitalization.reAdmission.coding">
       <path value="Encounter.hospitalization.reAdmission.coding" />
       <min value="1" />
@@ -327,6 +503,28 @@
       <min value="1" />
       <fixedUri value="Organization" />
     </element>
+=======
+    <element id="Encounter.hospitalization.dischargeDisposition">
+      <path value="Encounter.hospitalization.dischargeDisposition" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition.coding">
+      <path value="Encounter.hospitalization.dischargeDisposition.coding" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition.coding.system">
+      <path value="Encounter.hospitalization.dischargeDisposition.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition.coding.code">
+      <path value="Encounter.hospitalization.dischargeDisposition.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition.coding.display">
+      <path value="Encounter.hospitalization.dischargeDisposition.coding.display" />
+      <min value="1" />
+    </element>
+>>>>>>> cd5aa2218e8e51511b6b86d64fb1de6b58e08c70
     <element id="Encounter.location.location.reference">
       <path value="Encounter.location.location.reference" />
       <min value="1" />
@@ -335,6 +533,7 @@
       <path value="Encounter.location.location.type" />
       <min value="1" />
     </element>
+<<<<<<< HEAD
     <element id="Encounter.location.physicalType.coding">
       <path value="Encounter.location.physicalType.coding" />
       <min value="1" />
@@ -351,6 +550,8 @@
       <path value="Encounter.location.physicalType.coding.display" />
       <min value="1" />
     </element>
+=======
+>>>>>>> cd5aa2218e8e51511b6b86d64fb1de6b58e08c70
     <element id="Encounter.serviceProvider">
       <path value="Encounter.serviceProvider" />
       <min value="1" />
@@ -362,7 +563,10 @@
     <element id="Encounter.serviceProvider.type">
       <path value="Encounter.serviceProvider.type" />
       <min value="1" />
+<<<<<<< HEAD
       <fixedUri value="Organization" />
+=======
+>>>>>>> cd5aa2218e8e51511b6b86d64fb1de6b58e08c70
     </element>
     <element id="Encounter.partOf.reference">
       <path value="Encounter.partOf.reference" />

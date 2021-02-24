@@ -73,9 +73,17 @@
     </thead>
     <tbody>
       <tr>
+        <td>Encounters</td>
+        <td>
+          <a href="StructureDefinition-Encounter.html">BR-Core Encounter Profile</a>
+        </td>
+        <td>Procedure</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>Patients</td>
         <td>
-          <a href="StructureDefinition-patient.html">BR-Core Patient Profile</a>
+          <a href="StructureDefinition-Patient.html">BR-Core Patient Profile</a>
         </td>
         <td>Patient</td>
         <td></td>
@@ -83,11 +91,19 @@
       <tr>
         <td>Practitioners</td>
         <td>
-          <a href="StructureDefinition-practitioner.html">BR-Core Practitioner Profile</a>
+          <a href="StructureDefinition-Practitioner.html">BR-Core Practitioner Profile</a>
         </td>
         <td>Procedure</td>
         <td></td>
-      </tr>      
+      </tr>    
+      <tr>
+        <td>Organizations</td>
+        <td>
+          <a href="StructureDefinition-Organization.html">BR-Core Organization Profile</a>
+        </td>
+        <td>Procedure</td>
+        <td></td>
+      </tr>  
     </tbody>
   </table>
 
