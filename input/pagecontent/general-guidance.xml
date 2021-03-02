@@ -73,11 +73,19 @@
     </thead>
     <tbody>
       <tr>
+        <td>Conditions</td>
+        <td>
+          <a href="StructureDefinition-Condition.html">BR-Core Condition Profile</a>
+        </td>
+        <td>Condition</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>Encounters</td>
         <td>
           <a href="StructureDefinition-Encounter.html">BR-Core Encounter Profile</a>
         </td>
-        <td>Procedure</td>
+        <td>Encounter</td>
         <td></td>
       </tr>
       <tr>
@@ -93,7 +101,7 @@
         <td>
           <a href="StructureDefinition-Practitioner.html">BR-Core Practitioner Profile</a>
         </td>
-        <td>Procedure</td>
+        <td>Practitioner</td>
         <td></td>
       </tr>    
       <tr>
@@ -101,7 +109,7 @@
         <td>
           <a href="StructureDefinition-Organization.html">BR-Core Organization Profile</a>
         </td>
-        <td>Procedure</td>
+        <td>Organization</td>
         <td></td>
       </tr>  
     </tbody>

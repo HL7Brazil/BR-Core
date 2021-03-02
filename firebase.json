@@ -19,6 +19,11 @@
         "type": 301
       },
       {
+        "source": "/fhir/StructureDefinition/Condition",
+        "destination": "/fhir/StructureDefinition-Condition.html",
+        "type": 301
+      },
+      {
         "source": "/fhir/StructureDefinition/Encounter",
         "destination": "/fhir/StructureDefinition-Encounter.html",
         "type": 301

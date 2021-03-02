@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Condition" />
+  <url value="https://br-core.gointerop.com/fhir/StructureDefinition/Condition" />
+  <version value="0.1.0" />
+  <name value="Condition" />
+  <title value="Condition" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Pattern" />
+  </mapping>
+  <mapping>
+    <identity value="sct-concept" />
+    <uri value="http://snomed.info/conceptdomain" />
+    <name value="SNOMED CT Concept Domain Binding" />
+  </mapping>
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="sct-attr" />
+    <uri value="http://snomed.org/attributebinding" />
+    <name value="SNOMED CT Attribute Binding" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Condition" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Condition" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Condition.identifier">
+      <path value="Condition.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Condition.identifier.use">
+      <path value="Condition.identifier.use" />
+      <min value="1" />
+    </element>
+    <element id="Condition.identifier.system">
+      <path value="Condition.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Condition.identifier.value">
+      <path value="Condition.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Condition.identifier:sliceBRRNDS">
+      <path value="Condition.identifier" />
+      <sliceName value="sliceBRRNDS" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Condition.identifier:sliceBRRNDS.use">
+      <path value="Condition.identifier.use" />
+      <min value="1" />
+      <fixedCode value="official" />
+    </element>
+    <element id="Condition.identifier:sliceBRRNDS.system">
+      <path value="Condition.identifier.system" />
+      <min value="1" />
+      <patternUri value="http://www.saude.gov.br/fhir/r4/NamingSystem/BRRNDS-*" />
+    </element>
+    <element id="Condition.identifier:sliceBRRNDS.value">
+      <path value="Condition.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Condition.clinicalStatus">
+      <path value="Condition.clinicalStatus" />
+      <min value="1" />
+    </element>
+    <element id="Condition.clinicalStatus.coding">
+      <path value="Condition.clinicalStatus.coding" />
+      <min value="1" />
+    </element>
+    <element id="Condition.clinicalStatus.coding.system">
+      <path value="Condition.clinicalStatus.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Condition.clinicalStatus.coding.code">
+      <path value="Condition.clinicalStatus.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Condition.clinicalStatus.coding.display">
+      <path value="Condition.clinicalStatus.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Condition.verificationStatus">
+      <path value="Condition.verificationStatus" />
+      <min value="1" />
+    </element>
+    <element id="Condition.verificationStatus.coding">
+      <path value="Condition.verificationStatus.coding" />
+      <min value="1" />
+    </element>
+    <element id="Condition.verificationStatus.coding.system">
+      <path value="Condition.verificationStatus.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Condition.verificationStatus.coding.code">
+      <path value="Condition.verificationStatus.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Condition.verificationStatus.coding.display">
+      <path value="Condition.verificationStatus.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Condition.category">
+      <path value="Condition.category" />
+      <min value="1" />
+    </element>
+    <element id="Condition.category.coding">
+      <path value="Condition.category.coding" />
+      <min value="1" />
+    </element>
+    <element id="Condition.category.coding.system">
+      <path value="Condition.category.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Condition.category.coding.code">
+      <path value="Condition.category.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Condition.category.coding.display">
+      <path value="Condition.category.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Condition.severity.coding">
+      <path value="Condition.severity.coding" />
+      <min value="1" />
+    </element>
+    <element id="Condition.severity.coding.system">
+      <path value="Condition.severity.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Condition.severity.coding.code">
+      <path value="Condition.severity.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Condition.severity.coding.display">
+      <path value="Condition.severity.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Condition.code.coding">
+      <path value="Condition.code.coding" />
+      <min value="1" />
+    </element>
+    <element id="Condition.code.coding.system">
+      <path value="Condition.code.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Condition.code.coding.code">
+      <path value="Condition.code.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Condition.code.coding.display">
+      <path value="Condition.code.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Condition.bodySite.coding">
+      <path value="Condition.bodySite.coding" />
+      <min value="1" />
+    </element>
+    <element id="Condition.bodySite.coding.system">
+      <path value="Condition.bodySite.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Condition.bodySite.coding.code">
+      <path value="Condition.bodySite.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Condition.bodySite.coding.display">
+      <path value="Condition.bodySite.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Condition.subject">
+      <path value="Condition.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+        <targetProfile value="https://br-core.gointerop.com/fhir/StructureDefinition/Patient" />
+      </type>
+    </element>
+    <element id="Condition.subject.reference">
+      <path value="Condition.subject.reference" />
+      <min value="1" />
+    </element>
+    <element id="Condition.subject.type">
+      <path value="Condition.subject.type" />
+      <min value="1" />
+    </element>
+    <element id="Condition.recordedDate">
+      <path value="Condition.recordedDate" />
+      <min value="1" />
+    </element>
+    <element id="Condition.recorder">
+      <path value="Condition.recorder" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="https://br-core.gointerop.com/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="https://br-core.gointerop.com/fhir/StructureDefinition/Patient" />
+      </type>
+    </element>
+    <element id="Condition.recorder.reference">
+      <path value="Condition.recorder.reference" />
+      <min value="1" />
+    </element>
+    <element id="Condition.recorder.type">
+      <path value="Condition.recorder.type" />
+      <min value="1" />
+    </element>
+    <element id="Condition.asserter">
+      <path value="Condition.asserter" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="https://br-core.gointerop.com/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="https://br-core.gointerop.com/fhir/StructureDefinition/Patient" />
+      </type>
+    </element>
+    <element id="Condition.asserter.reference">
+      <path value="Condition.asserter.reference" />
+      <min value="1" />
+    </element>
+    <element id="Condition.asserter.type">
+      <path value="Condition.asserter.type" />
+      <min value="1" />
+    </element>
+    <element id="Condition.stage.summary.coding">
+      <path value="Condition.stage.summary.coding" />
+      <min value="1" />
+    </element>
+    <element id="Condition.stage.summary.coding.system">
+      <path value="Condition.stage.summary.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Condition.stage.summary.coding.code">
+      <path value="Condition.stage.summary.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Condition.stage.summary.coding.display">
+      <path value="Condition.stage.summary.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Condition.stage.assessment.reference">
+      <path value="Condition.stage.assessment.reference" />
+      <min value="1" />
+    </element>
+    <element id="Condition.stage.assessment.type">
+      <path value="Condition.stage.assessment.type" />
+      <min value="1" />
+    </element>
+    <element id="Condition.stage.type.coding">
+      <path value="Condition.stage.type.coding" />
+      <min value="1" />
+    </element>
+    <element id="Condition.stage.type.coding.system">
+      <path value="Condition.stage.type.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Condition.stage.type.coding.code">
+      <path value="Condition.stage.type.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Condition.stage.type.coding.display">
+      <path value="Condition.stage.type.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Condition.evidence.code.coding">
+      <path value="Condition.evidence.code.coding" />
+      <min value="1" />
+    </element>
+    <element id="Condition.evidence.code.coding.system">
+      <path value="Condition.evidence.code.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Condition.evidence.code.coding.code">
+      <path value="Condition.evidence.code.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Condition.evidence.code.coding.display">
+      <path value="Condition.evidence.code.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Condition.evidence.detail.reference">
+      <path value="Condition.evidence.detail.reference" />
+      <min value="1" />
+    </element>
+    <element id="Condition.evidence.detail.type">
+      <path value="Condition.evidence.detail.type" />
+      <min value="1" />
+    </element>
+    <element id="Condition.note.author[x]">
+      <path value="Condition.note.author[x]" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="https://br-core.gointerop.com/fhir/StructureDefinition/Patient" />
+        <targetProfile value="https://br-core.gointerop.com/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="https://br-core.gointerop.com/StructureDefinition/Organization" />
+      </type>
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Condition.note.time">
+      <path value="Condition.note.time" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>

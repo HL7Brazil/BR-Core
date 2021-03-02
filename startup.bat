@@ -1,0 +1,1 @@
+start java -Dfile.encoding=UTF-8 -jar -Xms1g -Xmx4g publisher.jar -ig ig.ini -tx 'n/a'
