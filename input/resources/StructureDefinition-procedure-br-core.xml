@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://br-core.gointerop.com/fhir/StructureDefinition/Procedure" />
+  <name value="Procedure" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Pattern" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Procedure" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Procedure" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Procedure.identifier:sliceBRRNDS">
+      <path value="Procedure.identifier" />
+      <sliceName value="sliceBRRNDS" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Procedure.identifier:sliceBRRNDS.use">
+      <path value="Procedure.identifier.use" />
+      <min value="1" />
+      <fixedCode value="official" />
+    </element>
+    <element id="Procedure.identifier:sliceBRRNDS.system">
+      <path value="Procedure.identifier.system" />
+      <min value="1" />
+      <patternUri value="http://www.saude.gov.br/fhir/r4/NamingSystem/BRRNDS-*" />
+    </element>
+    <element id="Procedure.identifier:sliceBRRNDS.value">
+      <path value="Procedure.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.basedOn.reference">
+      <path value="Procedure.basedOn.reference" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.basedOn.type">
+      <path value="Procedure.basedOn.type" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.partOf.reference">
+      <path value="Procedure.partOf.reference" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.partOf.type">
+      <path value="Procedure.partOf.type" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.status">
+      <path value="Procedure.status" />
+      <fixedCode value="completed" />
+    </element>
+    <element id="Procedure.statusReason.coding">
+      <path value="Procedure.statusReason.coding" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.statusReason.coding.system">
+      <path value="Procedure.statusReason.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.statusReason.coding.code">
+      <path value="Procedure.statusReason.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.statusReason.coding.display">
+      <path value="Procedure.statusReason.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.category.coding">
+      <path value="Procedure.category.coding" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.category.coding.system">
+      <path value="Procedure.category.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.category.coding.code">
+      <path value="Procedure.category.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.category.coding.display">
+      <path value="Procedure.category.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.code">
+      <path value="Procedure.code" />
+      <min value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://www.saude.gov.br/fhir/r4/ValueSet/BRProcedimentosNacionais-1.0" />
+      </binding>
+    </element>
+    <element id="Procedure.code.coding">
+      <path value="Procedure.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Procedure.code.coding.system">
+      <path value="Procedure.code.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.code.coding.code">
+      <path value="Procedure.code.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.code.coding.display">
+      <path value="Procedure.code.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.code.coding:sliceTUSS">
+      <path value="Procedure.code.coding" />
+      <sliceName value="sliceTUSS" />
+    </element>
+    <element id="Procedure.code.coding:sliceTUSS.system">
+      <path value="Procedure.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBHPMTUSS" />
+    </element>
+    <element id="Procedure.code.coding:sliceTUSS.code">
+      <path value="Procedure.code.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.code.coding:sliceTUSS.display">
+      <path value="Procedure.code.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.code.coding:sliceTABSUS">
+      <path value="Procedure.code.coding" />
+      <sliceName value="sliceTABSUS" />
+    </element>
+    <element id="Procedure.code.coding:sliceTABSUS.system">
+      <path value="Procedure.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS" />
+    </element>
+    <element id="Procedure.code.coding:sliceTABSUS.code">
+      <path value="Procedure.code.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.code.coding:sliceTABSUS.display">
+      <path value="Procedure.code.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.subject.reference">
+      <path value="Procedure.subject.reference" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.subject.type">
+      <path value="Procedure.subject.type" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.encounter.reference">
+      <path value="Procedure.encounter.reference" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.encounter.type">
+      <path value="Procedure.encounter.type" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.performed[x]">
+      <path value="Procedure.performed[x]" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="Procedure.recorder.reference">
+      <path value="Procedure.recorder.reference" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.recorder.type">
+      <path value="Procedure.recorder.type" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.asserter.reference">
+      <path value="Procedure.asserter.reference" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.asserter.type">
+      <path value="Procedure.asserter.type" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.performer">
+      <path value="Procedure.performer" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.performer.function">
+      <path value="Procedure.performer.function" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://www.saude.gov.br/fhir/r4/ValueSet/BROcupacao-1.0" />
+      </binding>
+    </element>
+    <element id="Procedure.performer.function.coding">
+      <path value="Procedure.performer.function.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Procedure.performer.function.coding:sliceCBO">
+      <path value="Procedure.performer.function.coding" />
+      <sliceName value="sliceCBO" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.performer.function.coding:sliceCBO.system">
+      <path value="Procedure.performer.function.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO" />
+    </element>
+    <element id="Procedure.performer.function.coding:sliceCBO.code">
+      <path value="Procedure.performer.function.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.performer.function.coding:sliceCBO.display">
+      <path value="Procedure.performer.function.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.performer.actor">
+      <path value="Procedure.performer.actor" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://br-core.gointerop.com/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="https://br-core.gointerop.com/StructureDefinition/Organization" />
+      </type>
+    </element>
+    <element id="Procedure.performer.actor.reference">
+      <path value="Procedure.performer.actor.reference" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.performer.actor.type">
+      <path value="Procedure.performer.actor.type" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.performer.onBehalfOf">
+      <path value="Procedure.performer.onBehalfOf" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://br-core.gointerop.com/StructureDefinition/Organization" />
+      </type>
+    </element>
+    <element id="Procedure.performer.onBehalfOf.reference">
+      <path value="Procedure.performer.onBehalfOf.reference" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.performer.onBehalfOf.type">
+      <path value="Procedure.performer.onBehalfOf.type" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.location.reference">
+      <path value="Procedure.location.reference" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.location.type">
+      <path value="Procedure.location.type" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.reasonCode.coding">
+      <path value="Procedure.reasonCode.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Procedure.reasonCode.coding.system">
+      <path value="Procedure.reasonCode.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.reasonCode.coding.code">
+      <path value="Procedure.reasonCode.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.reasonCode.coding.display">
+      <path value="Procedure.reasonCode.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.reasonCode.coding:sliceCID">
+      <path value="Procedure.reasonCode.coding" />
+      <sliceName value="sliceCID" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.reasonCode.coding:sliceCID.system">
+      <path value="Procedure.reasonCode.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://hl7.org/fhir/sid/icd-10" />
+    </element>
+    <element id="Procedure.reasonCode.coding:sliceCID.code">
+      <path value="Procedure.reasonCode.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.reasonCode.coding:sliceCID.display">
+      <path value="Procedure.reasonCode.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.reasonReference.reference">
+      <path value="Procedure.reasonReference.reference" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.reasonReference.type">
+      <path value="Procedure.reasonReference.type" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.bodySite.coding">
+      <path value="Procedure.bodySite.coding" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.bodySite.coding.system">
+      <path value="Procedure.bodySite.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.bodySite.coding.code">
+      <path value="Procedure.bodySite.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.bodySite.coding.display">
+      <path value="Procedure.bodySite.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.outcome.coding">
+      <path value="Procedure.outcome.coding" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.outcome.coding.system">
+      <path value="Procedure.outcome.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.outcome.coding.code">
+      <path value="Procedure.outcome.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.outcome.coding.display">
+      <path value="Procedure.outcome.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.report.reference">
+      <path value="Procedure.report.reference" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.report.type">
+      <path value="Procedure.report.type" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.complication.coding">
+      <path value="Procedure.complication.coding" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.complication.coding.system">
+      <path value="Procedure.complication.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.complication.coding.code">
+      <path value="Procedure.complication.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.complication.coding.display">
+      <path value="Procedure.complication.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.complicationDetail.reference">
+      <path value="Procedure.complicationDetail.reference" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.complicationDetail.type">
+      <path value="Procedure.complicationDetail.type" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.followUp.coding">
+      <path value="Procedure.followUp.coding" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.followUp.coding.system">
+      <path value="Procedure.followUp.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.followUp.coding.code">
+      <path value="Procedure.followUp.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.followUp.coding.display">
+      <path value="Procedure.followUp.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.note.author[x]">
+      <path value="Procedure.note.author[x]" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://br-core.gointerop.com/StructureDefinition/Organization" />
+        <targetProfile value="https://br-core.gointerop.com/fhir/StructureDefinition/Practitioner" />
+      </type>
+    </element>
+    <element id="Procedure.usedReference.reference">
+      <path value="Procedure.usedReference.reference" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.usedReference.type">
+      <path value="Procedure.usedReference.type" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.usedCode.coding">
+      <path value="Procedure.usedCode.coding" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.usedCode.coding.system">
+      <path value="Procedure.usedCode.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.usedCode.coding.code">
+      <path value="Procedure.usedCode.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.usedCode.coding.display">
+      <path value="Procedure.usedCode.coding.display" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>
