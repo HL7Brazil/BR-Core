@@ -200,6 +200,10 @@
     <element id="Encounter.reasonCode.coding:sliceCIAP2">
       <path value="Encounter.reasonCode.coding" />
       <sliceName value="sliceCIAP2" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://br-core.gointerop.com/fhir/ValueSet/BRCIAP2-1.0" />
+      </binding>
     </element>
     <element id="Encounter.reasonCode.coding:sliceCIAP2.system">
       <path value="Encounter.reasonCode.coding.system" />

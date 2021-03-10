@@ -1,5 +1,5 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-    <id value="5cee5980-4c03-4b86-8a2a-85006a28bc38" />
+    <id value="BRProcedimentosNacionais-1.0" />
     <meta>
       <lastUpdated value="2020-04-07T18:23:28.563+00:00" />
     </meta>

@@ -164,6 +164,13 @@
     </element>
     <element id="Condition.code.coding">
       <path value="Condition.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <min value="1" />
     </element>
     <element id="Condition.code.coding.system">
@@ -175,6 +182,24 @@
       <min value="1" />
     </element>
     <element id="Condition.code.coding.display">
+      <path value="Condition.code.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Condition.code.coding:sliceCID">
+      <path value="Condition.code.coding" />
+      <sliceName value="sliceCID" />
+      <min value="1" />
+    </element>
+    <element id="Condition.code.coding:sliceCID.system">
+      <path value="Condition.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://hl7.org/fhir/sid/icd-10" />
+    </element>
+    <element id="Condition.code.coding:sliceCID.code">
+      <path value="Condition.code.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Condition.code.coding:sliceCID.display">
       <path value="Condition.code.coding.display" />
       <min value="1" />
     </element>

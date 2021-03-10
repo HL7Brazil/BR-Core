@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://br-core.gointerop.com/fhir/StructureDefinition/Procedure" />
   <id value="Procedure" />
+  <url value="https://br-core.gointerop.com/fhir/StructureDefinition/Procedure" />
   <version value="0.1.0" />
   <name value="Procedure" />
   <title value="Procedure" />
@@ -139,6 +139,10 @@
     <element id="Procedure.code.coding:sliceTUSS">
       <path value="Procedure.code.coding" />
       <sliceName value="sliceTUSS" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://br-core.gointerop.com/fhir/ValueSet/BRCBHPMTUSS-1.0" />
+      </binding>
     </element>
     <element id="Procedure.code.coding:sliceTUSS.system">
       <path value="Procedure.code.coding.system" />
@@ -156,6 +160,10 @@
     <element id="Procedure.code.coding:sliceTABSUS">
       <path value="Procedure.code.coding" />
       <sliceName value="sliceTABSUS" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://br-core.gointerop.com/fhir/ValueSet/BRTabelaSUS-1.0" />
+      </binding>
     </element>
     <element id="Procedure.code.coding:sliceTABSUS.system">
       <path value="Procedure.code.coding.system" />

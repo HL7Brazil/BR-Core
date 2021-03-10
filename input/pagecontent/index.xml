@@ -12,7 +12,7 @@
 
 <h3 id="introduction">Introdução</h3>
 
-<p>BR-Core é um perfil de interoperabilidade nacional que visa habilitar troca de dados de farmacologia através da definição de padrões dentro do território brasileiro.</p>
+<p>BR-Core é um perfil de interoperabilidade nacional que visa habilitar troca de dados através da definição de padrões dentro do território brasileiro.</p>
 
 <p>O guia de implementação do BR-Core é baseado no <a href="http://hl7.org/fhir/R4/index.html" title="FHIR Versão R4">FHIR Version R4</a></p>
 
