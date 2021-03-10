@@ -1,0 +1,11 @@
+{
+  "name": "hl7BrazilTemplateIG",
+  "version": "1.0.0",
+  "type": "fhir.template",
+  "license": "CC0-1.0",
+  "description": "HL7 Brazil FHIR IG Template",
+  "base": "fhir.base.template",
+  "dependencies": {
+    "fhir.base.template": "current"
+  }
+}

@@ -42,6 +42,46 @@
         "source": "/fhir/StructureDefinition/Organization",
         "destination": "/fhir/StructureDefinition-Organization.html",
         "type": 301
+      },
+      {
+        "source": "/fhir/CodeSystem/BRCBO",
+        "destination": "/fhir/CodeSystem-BRCBO.html",
+        "type": 301
+      },
+      {
+        "source": "/fhir/CodeSystem/BRCIAP2",
+        "destination": "/fhir/CodeSystem-BRCIAP2.html",
+        "type": 301
+      },
+      {
+        "source": "/fhir/CodeSystem/BRCID10",
+        "destination": "/fhir/CodeSystem-BRCID10.html",
+        "type": 301
+      },
+      {
+        "source": "/fhir/CodeSystem/BRCBHPMTUSS",
+        "destination": "/fhir/CodeSystem-BRCBHPMTUSS.html",
+        "type": 301
+      },
+      {
+        "source": "/fhir/ValueSet/BROcupacao-1.0",
+        "destination": "/fhir/CodeSystem-BROcupacao-1.0.html",
+        "type": 301
+      },
+      {
+        "source": "/fhir/ValueSet/BRCIAP2-1.0",
+        "destination": "/fhir/ValueSet-BRCIAP2-1.0.html",
+        "type": 301
+      },
+      {
+        "source": "/fhir/ValueSet/BRCID10-1.0",
+        "destination": "/fhir/ValueSet-BRCID10-1.0.html",
+        "type": 301
+      },
+      {
+        "source": "/fhir/ValueSet/BRProcedimentosNacionais-1.0",
+        "destination": "/fhir/ValueSet-5cee5980-4c03-4b86-8a2a-85006a28bc38.html",
+        "type": 301
       }
     ]
   }

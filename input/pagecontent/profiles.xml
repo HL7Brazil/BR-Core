@@ -1,20 +1,31 @@
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
-    <a name="profiles"></a>
-    <h3 id="profiles">BR-Core profiles</h3>
-    
-<p>The following Profiles and have been defined for this implementation guide.</p>
+  <a name="profiles"></a>
+  <h3 id="profiles">Perfis</h3>
 
-<li><a href="StructureDefinition-Condition.html">BR-Core Condition Profile</a></li>
-<li><a href="StructureDefinition-Encounter.html">BR-Core Encounter Profile</a></li>
-<li><a href="StructureDefinition-Patient.html">BR-Core Patient Profile</a></li>
-<li><a href="StructureDefinition-Practitioner.html">BR-Core Practitioner Profile</a></li>
-<li><a href="StructureDefinition-Organization.html">BR-Core Organization Profile</a></li>
+  <p>
+    A lista de perfis deste guia segue abaixo. Cada perfil define um mínimo de elementos obrigatórios, extensões (campos adicionais) e requisitos semânticos que
+    <strong>DEVEM</strong>
+    ser apresentados. Para cada perfil, requisitos e orientações são fornecidos numa narrativa simples. Uma tabela formal e hierárquica é apresentada 
+      contendo uma
+    <a href="http://hl7.org/fhir/R4/formats.html#table">visão lógica</a>
+    do conteúdo em formas diferenciais (em relação ao canônico do FHIR R4)
+      ou resumidas, com referências a terminologias utilizadas e exemplos.
+      Para cada Perfil, uma visão geral dos dados obrigatórios para uma interação de leitura ou escrita
+      é fornecida.
+  </p>
 
-<!--<h3 id="terminologies">Terminologies</h3>
+  <li><a href="StructureDefinition-Patient.html">Perfil de Paciente</a></li>
+  <li><a href="StructureDefinition-Practitioner.html">Perfil do Profissional de Saúde</a></li>
+  <li><a href="StructureDefinition-Organization.html">Perfil do Estabelecimento de Sáude</a></li>
+  <li><a href="StructureDefinition-Encounter.html">Perfil do Atendimento em Sáude</a></li>
+  <li><a href="StructureDefinition-Condition.html">Perfil da Condição em Sáude</a></li>
+  <li><a href="StructureDefinition-Procedure.html">Perfil da Procedimento em Sáude</a></li>
+
+  <!--<h3 id="terminologies">Terminologies</h3>
 
 <p> The following Naming Systems have been defined as part of the BR-Core implementation Guide.</p>
 <ul>
 <li><a href="NamingSystem-govbr-receitafederal-pessoajuridica-id.html">Cadastro de Pessoa Jurídica da Receita Federal</a></li>
 </ul>-->
 
-  </div>
+</div>

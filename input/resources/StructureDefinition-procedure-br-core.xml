@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="https://br-core.gointerop.com/fhir/StructureDefinition/Procedure" />
+  <id value="Procedure" />
+  <version value="0.1.0" />
   <name value="Procedure" />
+  <title value="Procedure" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -44,7 +47,7 @@
     <element id="Procedure.identifier:sliceBRRNDS.system">
       <path value="Procedure.identifier.system" />
       <min value="1" />
-      <patternUri value="http://www.saude.gov.br/fhir/r4/NamingSystem/BRRNDS-*" />
+      <patternUri value="http://saude.gov.br/fhir/R4/NamingSystem/BRRNDS-*" />
     </element>
     <element id="Procedure.identifier:sliceBRRNDS.value">
       <path value="Procedure.identifier.value" />
@@ -107,7 +110,7 @@
       <min value="1" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://www.saude.gov.br/fhir/r4/ValueSet/BRProcedimentosNacionais-1.0" />
+        <valueSet value="https://br-core.gointerop.com/fhir/ValueSet/BRProcedimentosNacionais-1.0" />
       </binding>
     </element>
     <element id="Procedure.code.coding">
@@ -140,7 +143,7 @@
     <element id="Procedure.code.coding:sliceTUSS.system">
       <path value="Procedure.code.coding.system" />
       <min value="1" />
-      <fixedUri value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBHPMTUSS" />
+      <fixedUri value="https://br-core.gointerop.com/fhir/CodeSystem/BRCBHPMTUSS" />
     </element>
     <element id="Procedure.code.coding:sliceTUSS.code">
       <path value="Procedure.code.coding.code" />
@@ -157,7 +160,7 @@
     <element id="Procedure.code.coding:sliceTABSUS.system">
       <path value="Procedure.code.coding.system" />
       <min value="1" />
-      <fixedUri value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS" />
+      <fixedUri value="https://br-core.gointerop.com/fhir/CodeSystem/BRTabelaSUS" />
     </element>
     <element id="Procedure.code.coding:sliceTABSUS.code">
       <path value="Procedure.code.coding.code" />
@@ -213,7 +216,7 @@
       <path value="Procedure.performer.function" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://www.saude.gov.br/fhir/r4/ValueSet/BROcupacao-1.0" />
+        <valueSet value="https://br-core.gointerop.com/fhir/ValueSet/BROcupacao-1.0" />
       </binding>
     </element>
     <element id="Procedure.performer.function.coding">
@@ -235,7 +238,7 @@
     <element id="Procedure.performer.function.coding:sliceCBO.system">
       <path value="Procedure.performer.function.coding.system" />
       <min value="1" />
-      <fixedUri value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO" />
+      <fixedUri value="https://br-core.gointerop.com/fhir/CodeSystem/BRCBO" />
     </element>
     <element id="Procedure.performer.function.coding:sliceCBO.code">
       <path value="Procedure.performer.function.coding.code" />

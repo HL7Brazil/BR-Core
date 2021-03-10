@@ -67,11 +67,6 @@
         </page>
       </page>
       <page>
-        <nameUrl value="security.html"/>
-        <title value="Security"/>
-        <generation value="html"/>
-      </page>
-      <page>
         <nameUrl value="downloads.html"/>
         <title value="Downloads"/>
         <generation value="html"/>
