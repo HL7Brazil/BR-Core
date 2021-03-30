@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Observation" />
+  <url value="https://br-core.gointerop.com/fhir/StructureDefinition/Observation" />
+  <version value="0.1.0" />
+  <name value="Observation" />
+  <title value="Observation" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Pattern" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation.identifier:sliceBRRNDS">
+      <path value="Observation.identifier" />
+      <sliceName value="sliceBRRNDS" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Observation.identifier:sliceBRRNDS.use">
+      <path value="Observation.identifier.use" />
+      <min value="1" />
+      <fixedCode value="official" />
+    </element>
+    <element id="Observation.identifier:sliceBRRNDS.system">
+      <path value="Observation.identifier.system" />
+      <min value="1" />
+      <patternUri value="http://saude.gov.br/fhir/R4/NamingSystem/BRRNDS-*" />
+    </element>
+    <element id="Observation.identifier:sliceBRRNDS.value">
+      <path value="Observation.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject"/>
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>
