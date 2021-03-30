@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://br-core.gointerop.com/fhir/StructureDefinition/CarePlan" />
+  <name value="CarePlan" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Pattern" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="CarePlan" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/CarePlan" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="CarePlan.identifier:sliceBRRNDS">
+      <path value="CarePlan.identifier" />
+      <sliceName value="sliceBRRNDS" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="CarePlan.identifier:sliceBRRNDS.use">
+      <path value="CarePlan.identifier.use" />
+      <min value="1" />
+      <fixedCode value="official" />
+    </element>
+    <element id="CarePlan.identifier:sliceBRRNDS.system">
+      <path value="CarePlan.identifier.system" />
+      <min value="1" />
+      <patternUri value="http://www.saude.gov.br/fhir/r4/NamingSystem/BRRNDS-*" />
+    </element>
+    <element id="CarePlan.identifier:sliceBRRNDS.value">
+      <path value="CarePlan.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="CarePlan.basedOn.reference">
+      <path value="CarePlan.basedOn.reference" />
+      <min value="1" />
+    </element>
+    <element id="CarePlan.replaces.reference">
+      <path value="CarePlan.replaces.reference" />
+      <min value="1" />
+    </element>
+    <element id="CarePlan.partOf.reference">
+      <path value="CarePlan.partOf.reference" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>

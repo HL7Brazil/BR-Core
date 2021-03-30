@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="ClinicalImpression" />
+  <url value="https://br-core.gointerop.com/fhir/StructureDefinition/ClinicalImpression" />
+  <version value="0.0.1" />
+  <name value="ClinicalImpression" />
+  <title value="ClinicalImpression" />
+  <status value="draft" />
+  <publisher value="HL7 Brasil" />
+  <copyright value="Copyright 2021 Instituto HL7 Brasil.&#xD;&#xA;&#xD;&#xA;Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);&#xD;&#xA;you may not use this file except in compliance with the License.&#xD;&#xA;You may obtain a copy of the License at&#xD;&#xA;&#xD;&#xA;    http://www.apache.org/licenses/LICENSE-2.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software&#xD;&#xA;distributed under the License is distributed on an &quot;AS IS&quot; BASIS,&#xD;&#xA;WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.&#xD;&#xA;See the License for the specific language governing permissions and&#xD;&#xA;limitations under the License." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Pattern" />
+  </mapping>
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="ClinicalImpression" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/ClinicalImpression" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="ClinicalImpression.identifier">
+      <path value="ClinicalImpression.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="ClinicalImpression.identifier.use">
+      <path value="ClinicalImpression.identifier.use" />
+      <min value="1" />
+    </element>
+    <element id="ClinicalImpression.identifier.system">
+      <path value="ClinicalImpression.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="ClinicalImpression.identifier.value">
+      <path value="ClinicalImpression.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="ClinicalImpression.identifier:sliceBRRNDS">
+      <path value="ClinicalImpression.identifier" />
+      <sliceName value="sliceBRRNDS" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="ClinicalImpression.identifier:sliceBRRNDS.use">
+      <path value="ClinicalImpression.identifier.use" />
+      <min value="1" />
+      <fixedCode value="official" />
+    </element>
+    <element id="ClinicalImpression.identifier:sliceBRRNDS.system">
+      <path value="ClinicalImpression.identifier.system" />
+      <min value="1" />
+      <patternUri value="http://www.saude.gov.br/fhir/r4/NamingSystem/BRRNDS-*" />
+    </element>
+    <element id="ClinicalImpression.identifier:sliceBRRNDS.value">
+      <path value="ClinicalImpression.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="ClinicalImpression.description">
+      <path value="ClinicalImpression.description" />
+      <min value="1" />
+    </element>
+    <element id="ClinicalImpression.subject">
+      <path value="ClinicalImpression.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://br-core.gointerop.com/fhir/StructureDefinition/Patient" />
+      </type>
+    </element>
+    <element id="ClinicalImpression.subject.reference">
+      <path value="ClinicalImpression.subject.reference" />
+      <min value="1" />
+    </element>
+    <element id="ClinicalImpression.subject.type">
+      <path value="ClinicalImpression.subject.type" />
+      <min value="1" />
+      <fixedUri value="Patient" />
+    </element>
+    <element id="ClinicalImpression.encounter">
+      <path value="ClinicalImpression.encounter" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://br-core.gointerop.com/fhir/StructureDefinition/Encounter" />
+      </type>
+    </element>
+    <element id="ClinicalImpression.encounter.reference">
+      <path value="ClinicalImpression.encounter.reference" />
+      <min value="1" />
+    </element>
+    <element id="ClinicalImpression.encounter.type">
+      <path value="ClinicalImpression.encounter.type" />
+      <min value="1" />
+      <fixedUri value="Encounter" />
+    </element>
+    <element id="ClinicalImpression.effective[x]">
+      <path value="ClinicalImpression.effective[x]" />
+      <min value="1" />
+    </element>
+    <element id="ClinicalImpression.assessor">
+      <path value="ClinicalImpression.assessor" />
+      <min value="1" />
+    </element>
+    <element id="ClinicalImpression.assessor.reference">
+      <path value="ClinicalImpression.assessor.reference" />
+      <min value="1" />
+    </element>
+    <element id="ClinicalImpression.assessor.type">
+      <path value="ClinicalImpression.assessor.type" />
+      <min value="1" />
+    </element>
+    <element id="ClinicalImpression.previous.reference">
+      <path value="ClinicalImpression.previous.reference" />
+      <min value="1" />
+    </element>
+    <element id="ClinicalImpression.problem.reference">
+      <path value="ClinicalImpression.problem.reference" />
+      <min value="1" />
+    </element>
+    <element id="ClinicalImpression.problem.type">
+      <path value="ClinicalImpression.problem.type" />
+      <min value="1" />
+    </element>
+    <element id="ClinicalImpression.supportingInfo.reference">
+      <path value="ClinicalImpression.supportingInfo.reference" />
+      <min value="1" />
+    </element>
+    <element id="ClinicalImpression.supportingInfo.type">
+      <path value="ClinicalImpression.supportingInfo.type" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>
