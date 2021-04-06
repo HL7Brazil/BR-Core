@@ -98,7 +98,7 @@
     </element>
     <element id="Organization.type">
       <path value="Organization.type" />
-      <min value="1" />
+      <min value="0" />
     </element>
     <element id="Organization.type.coding">
       <path value="Organization.type.coding" />

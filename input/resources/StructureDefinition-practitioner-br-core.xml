@@ -210,5 +210,36 @@
       <path value="Practitioner.birthDate" />
       <min value="1" />
     </element>
+    <element id="Practitioner.qualification.code">
+      <path value="Practitioner.qualification.code" />
+      <short value="Qualificação do Profissional" />
+      <definition value="Qualificação do profisisonal decorrente de processo de formação, certificação ou acreditação, utilizando a Classificação Brasileira de Ocupações (CBO)." />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <description value="Ocupação" />
+        <valueSet value="https://br-core.gointerop.com/fhir/ValueSet/BROcupacao-1.0" />
+      </binding>
+    </element>
+    <element id="Practitioner.qualification.code.coding">
+      <path value="Practitioner.qualification.code.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Practitioner.qualification.code.coding.system">
+      <path value="Practitioner.qualification.code.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Practitioner.qualification.code.coding.code">
+      <path value="Practitioner.qualification.code.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Practitioner.qualification.code.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Practitioner.qualification.code.coding.display" />
+      <min value="1" />
+    </element>
   </differential>
 </StructureDefinition>
