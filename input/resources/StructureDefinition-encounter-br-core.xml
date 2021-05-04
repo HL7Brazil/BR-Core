@@ -208,7 +208,7 @@
     <element id="Encounter.reasonCode.coding:sliceCIAP2.system">
       <path value="Encounter.reasonCode.coding.system" />
       <min value="1" />
-      <fixedUri value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRCIAP2" />
+      <fixedUri value="https://br-core.gointerop.com/fhir/CodeSystem/BRCIAP2" />
     </element>
     <element id="Encounter.reasonCode.coding:sliceCIAP2.code">
       <path value="Encounter.reasonCode.coding.code" />

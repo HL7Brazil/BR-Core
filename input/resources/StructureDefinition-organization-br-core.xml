@@ -98,7 +98,12 @@
     </element>
     <element id="Organization.type">
       <path value="Organization.type" />
-      <min value="0" />
+      <min value="0" />      
+      <binding>        
+        <strength value="preferred"/> 
+        <description value="O tipo do estabelecimento."/> 
+        <valueSet value="https://br-core.gointerop.com/fhir/ValueSet/BRTipoEstabelecimentoSaude-1.0"/> 
+      </binding>
     </element>
     <element id="Organization.type.coding">
       <path value="Organization.type.coding" />
