@@ -2,6 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="https://br-core.gointerop.com/fhir/StructureDefinition/CarePlan" />
   <name value="CarePlan" />
+  <title value="CarePlan" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <mapping>
